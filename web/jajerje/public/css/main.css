@@ -1,7 +1,7 @@
 /* Override colors from CSS library */
 :root {
-  --accent: #f902ca;
-  --accent-hover: #f902ca;
+  --accent: #1E90FF;
+  --accent-hover: #1E90FF;
 }
 
 /* Custom style for the logo */
@@ -12,9 +12,9 @@ img.icon {
 }
 
 
-/* Change font to Tahoma, as seen in Cookie Clicker */
+/* Change font to readable fonts */
 :root {
-  --font-family: Tahoma, Geneva, sans-serif;
+  --font-family: 'Roboto', sans-serif;
 }
 
 body {

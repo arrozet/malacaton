@@ -2,38 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jajerje.fun/es/principles/1-amaras/</loc>
+    <loc>//localhost:1313/es/reservoir/1-amaras/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/2-no_tomaras/</loc>
+    <loc>//localhost:1313/es/reservoir/2-no_tomaras/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/3-santificar/</loc>
+    <loc>//localhost:1313/es/reservoir/3-santificar/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/4-honraras/</loc>
+    <loc>//localhost:1313/es/reservoir/4-honraras/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/5-no_matar/</loc>
+    <loc>//localhost:1313/es/reservoir/5-no_matar/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/6-no_actos_impuros/</loc>
+    <loc>//localhost:1313/es/reservoir/6-no_actos_impuros/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/7-no_robaras/</loc>
+    <loc>//localhost:1313/es/reservoir/7-no_robaras/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/8-no_mentiras/</loc>
+    <loc>//localhost:1313/es/reservoir/8-no_mentiras/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/9-no_pensa/</loc>
+    <loc>//localhost:1313/es/reservoir/9-no_pensa/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/10-no_codiciaras/</loc>
+    <loc>//localhost:1313/es/reservoir/10-no_codiciaras/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/download/</loc>
+    <loc>//localhost:1313/es/analysis/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/whoarewe/</loc>
+    <loc>//localhost:1313/es/map/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/categories/</loc>
+    <loc>//localhost:1313/es/whoarewe/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/contact/</loc>
+    <loc>//localhost:1313/es/categories/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/principles/</loc>
+    <loc>//localhost:1313/es/contact/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/</loc>
+    <loc>//localhost:1313/es/reservoir/</loc>
   </url><url>
-    <loc>https://jajerje.fun/es/tags/</loc>
+    <loc>//localhost:1313/es/</loc>
+  </url><url>
+    <loc>//localhost:1313/es/tags/</loc>
   </url>
 </urlset>

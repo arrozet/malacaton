@@ -1,5 +1,5 @@
-baseURL = 'https://jajerje.fun'
-title = 'Feed The Leader'
+baseURL = 'none'
+title = 'DAJER'
 
 timeZone = 'Europe/Madrid'
 
@@ -24,35 +24,41 @@ buildFuture = true
         weight = 10
 
       [[languages.es.menu.main]]
-        identifier = "principles"
-        name = "Ideario"
-        url = "/es/principles"
+        identifier = "reservoir"
+        name = "Embalses"
+        url = "/es/reservoir"
         weight = 20
 
       [[languages.es.menu.main]]
-        identifier = "download"
-        name = "¡Descárgame!"
-        url = "/es/download"
+        identifier = "map"
+        name = "Mapa interactivo"
+        url = "/es/map"
         weight = 30
 
       [[languages.es.menu.main]]
+        identifier = "analysis"
+        name = "Análisis"
+        url = "/es/analysis"
+        weight = 40
+
+        [[languages.es.menu.main]]
         identifier = "contact"
         name = "Contacto"
         url = "/es/contact"
-        weight = 40
+        weight = 50
 
-      [[languages.es.menu.main]]
-      identifier = "whoarewe"
-      name = "¿Quiénes somos?"
-      url = "/es/whoarewe"
-      weight = 50
+        [[languages.es.menu.main]]
+        identifier = "whoarewe"
+        name = "¿Quiénes somos?"
+        url = "/es/whoarewe"
+        weight = 60
 
     [languages.es.params]
-      description = 'Oda al líder'
+      description = 'Get the water going (GTWG)'
 
 [params]
   [params.social]
-    twitter = 'FeedTheLeader'
-    title = 'Feed The Leader - JAJERJE studios'
-    description = 'Oda al líder.'
+    twitter = 'DAJER'
+    title = 'DAJER'
+    description = 'A sustainable approach to water management '
     image = 'https://jajerje.fun/favicon.ico'

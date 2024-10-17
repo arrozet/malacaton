@@ -1,102 +1,109 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inicio on Feed The Leader</title>
-    <link>https://jajerje.fun/es/</link>
-    <description>Recent content in Inicio on Feed The Leader</description>
+    <title>Inicio on DAJER</title>
+    <link>//localhost:1313/es/</link>
+    <description>Recent content in Inicio on DAJER</description>
     <generator>Hugo</generator>
     <language>es-es</language>
-    <atom:link href="https://jajerje.fun/es/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1. Amarás al líder sobre todas las cosas</title>
-      <link>https://jajerje.fun/es/principles/1-amaras/</link>
+      <link>//localhost:1313/es/reservoir/1-amaras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/1-amaras/</guid>
+      <guid>//localhost:1313/es/reservoir/1-amaras/</guid>
       <description></description>
     </item>
     <item>
       <title>2. No tomarás el nombre del líder en vano</title>
-      <link>https://jajerje.fun/es/principles/2-no_tomaras/</link>
+      <link>//localhost:1313/es/reservoir/2-no_tomaras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/2-no_tomaras/</guid>
+      <guid>//localhost:1313/es/reservoir/2-no_tomaras/</guid>
       <description></description>
     </item>
     <item>
       <title>3. Santificarás las victorias del régimen</title>
-      <link>https://jajerje.fun/es/principles/3-santificar/</link>
+      <link>//localhost:1313/es/reservoir/3-santificar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/3-santificar/</guid>
+      <guid>//localhost:1313/es/reservoir/3-santificar/</guid>
       <description></description>
     </item>
     <item>
       <title>4. Honrarás al líder y a sus deciciones</title>
-      <link>https://jajerje.fun/es/principles/4-honraras/</link>
+      <link>//localhost:1313/es/reservoir/4-honraras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/4-honraras/</guid>
+      <guid>//localhost:1313/es/reservoir/4-honraras/</guid>
       <description></description>
     </item>
     <item>
       <title>5. No matarás, siempre que no sea encomendado por el líder</title>
-      <link>https://jajerje.fun/es/principles/5-no_matar/</link>
+      <link>//localhost:1313/es/reservoir/5-no_matar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/5-no_matar/</guid>
+      <guid>//localhost:1313/es/reservoir/5-no_matar/</guid>
       <description></description>
     </item>
     <item>
       <title>6. No cometerás actos impuros, ni efectuarás calumnias o injurias sobre el líder</title>
-      <link>https://jajerje.fun/es/principles/6-no_actos_impuros/</link>
+      <link>//localhost:1313/es/reservoir/6-no_actos_impuros/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/6-no_actos_impuros/</guid>
+      <guid>//localhost:1313/es/reservoir/6-no_actos_impuros/</guid>
       <description></description>
     </item>
     <item>
       <title>7. No robarás, siempre que no sea encomendado por el líder</title>
-      <link>https://jajerje.fun/es/principles/7-no_robaras/</link>
+      <link>//localhost:1313/es/reservoir/7-no_robaras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/7-no_robaras/</guid>
+      <guid>//localhost:1313/es/reservoir/7-no_robaras/</guid>
       <description></description>
     </item>
     <item>
       <title>8. No mentirás, siempre que no sea encomendado por el líder</title>
-      <link>https://jajerje.fun/es/principles/8-no_mentiras/</link>
+      <link>//localhost:1313/es/reservoir/8-no_mentiras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/8-no_mentiras/</guid>
+      <guid>//localhost:1313/es/reservoir/8-no_mentiras/</guid>
       <description></description>
     </item>
     <item>
       <title>9. No pensarás fuera de lo establecido, siempre que no sea encomendado por el líder</title>
-      <link>https://jajerje.fun/es/principles/9-no_pensa/</link>
+      <link>//localhost:1313/es/reservoir/9-no_pensa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/9-no_pensa/</guid>
+      <guid>//localhost:1313/es/reservoir/9-no_pensa/</guid>
       <description></description>
     </item>
     <item>
       <title>10. No codiciarás los bienes ajenos, salvo si así lo requiere la agenda política del líder</title>
-      <link>https://jajerje.fun/es/principles/10-no_codiciaras/</link>
+      <link>//localhost:1313/es/reservoir/10-no_codiciaras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/principles/10-no_codiciaras/</guid>
+      <guid>//localhost:1313/es/reservoir/10-no_codiciaras/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/es/analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/es/analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>¡Descárgame!</title>
-      <link>https://jajerje.fun/es/download/</link>
+      <link>//localhost:1313/es/map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/download/</guid>
-      <description>Descarga Actualmente, Feed The Leader solo puede ser ejecutado en un ordenador corriendo el sistema operativo Windows. En un futuro cercano esperamos poder desplegar el ideario del líder en otras plataformas.&#xA;Para descargarlo, pulsa el siguiente botón:&#xA;Instalación La instalación es muy simple. Si sigues estos pasos, no te perderás. Te lo aseguro.&#xA;Descarga el archivo desde el botón de arriba. Verás que se te ha descargado un archivo con la extensión zip.</description>
+      <guid>//localhost:1313/es/map/</guid>
+      <description>&lt;h1 id=&#34;descarga&#34;&gt;Descarga&lt;/h1&gt;&#xA;&lt;p&gt;Actualmente, &lt;em&gt;Feed The Leader&lt;/em&gt; solo puede ser ejecutado en un ordenador corriendo el sistema operativo Windows. En un futuro cercano esperamos poder desplegar el ideario del líder en otras plataformas.&lt;/p&gt;&#xA;&lt;p&gt;Para descargarlo, pulsa el siguiente botón:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;//localhost:1313/assets/v0_1.zip&#34;&gt;&lt;img alt=&#34;Descarga ahora&#34; src=&#34;//localhost:1313/assets/download.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;instalación&#34;&gt;Instalación&lt;/h3&gt;&#xA;&lt;p&gt;La instalación es muy simple. Si sigues estos pasos, no te perderás. Te lo aseguro.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Descarga el archivo desde el botón de arriba. Verás que se te ha descargado un archivo con la extensión zip. ¡Vamos bien!&lt;/li&gt;&#xA;&lt;li&gt;Descomprime el archivo en tu lugar favorito. Para ello tendrás que dar clic derecho sobre el archivo y descomprimirlo con tu herramienta preferida.&lt;/li&gt;&#xA;&lt;li&gt;Abre la carpeta que ha aparecido tras extraer el archivo.&lt;/li&gt;&#xA;&lt;li&gt;Ejecuta &lt;code&gt;FeedTheLeader.exe&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;¡Y a disfrutar!&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>¿Quiénes somos?</title>
-      <link>https://jajerje.fun/es/whoarewe/</link>
+      <link>//localhost:1313/es/whoarewe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/whoarewe/</guid>
-      <description>Sobre nosotros JAJERJE studios es un pequeño grupo formado por siete integrantes nacido con la necesidad de cumplimentar un proyecto de la asignatura Introducción a la Ingeniería del Software. Ante el interrogante sobre qué proyecto llevar a cabo y la indecisión que nos corroía, decidimos (intentar) crear un clicker en Unity. Nunca habíamos usado Unity ni C#, pero aún así aceptamos el reto.&#xA;El resultado es el que podéis probar en esta misma página web, desplanzadoos al apartado de ¡Descárgame!</description>
+      <guid>//localhost:1313/es/whoarewe/</guid>
+      <description>&lt;h2 id=&#34;sobre-nosotros&#34;&gt;Sobre nosotros&lt;/h2&gt;&#xA;&lt;p&gt;JAJERJE studios es un pequeño grupo formado por siete integrantes nacido con la necesidad de cumplimentar un proyecto de la asignatura &lt;strong&gt;Introducción a la Ingeniería del Software&lt;/strong&gt;. Ante el interrogante sobre qué proyecto llevar a cabo y la indecisión que nos corroía, decidimos (intentar) crear un clicker en Unity. Nunca habíamos usado Unity ni C#, pero aún así aceptamos el reto.&lt;/p&gt;&#xA;&lt;p&gt;El resultado es el que podéis probar en esta misma página web, desplanzadoos al apartado de &lt;a href=&#34;//localhost:1313/es/download&#34;&gt;&lt;code&gt;¡Descárgame!&lt;/code&gt;&lt;/a&gt; y siguiendo los pasos pertinentes. Aunque humilde, espero que pueda cumplimentar tus expectativas, querido lector.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contacto</title>
-      <link>https://jajerje.fun/es/contact/</link>
+      <link>//localhost:1313/es/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jajerje.fun/es/contact/</guid>
-      <description>¡Habla con los cercanos al líder! ¿Quieres tener unas palabras con algunos de los más fieles seguidores del régimen? ¡No te preocupes! Siempre puedes ponerte en contacto con nosotros a través de nuestro correo electrónico developer@jajerje.fun&#xA;¡Estaremos encantados de responder a tus preguntas, recibir tus sugerencias o simplemente charlar sobre la grandeza de nuestro líder!&#xA;Nuestras redes sociales Desgraciadamente, estamos maquinando para poder adquirir los usernames @FeedTheLeader en las distintas plataformas, pero actualmente están ocupadas.</description>
+      <guid>//localhost:1313/es/contact/</guid>
+      <description>&lt;h2 id=&#34;habla-con-los-cercanos-al-líder&#34;&gt;¡Habla con los cercanos al líder!&lt;/h2&gt;&#xA;&lt;p&gt;¿Quieres tener unas palabras con algunos de los más fieles seguidores del régimen? ¡No te preocupes! Siempre puedes ponerte en contacto con&#xA;nosotros a través de nuestro correo electrónico &lt;a href=&#34;mailto:developer@jajerje.fun&#34;&gt;developer@jajerje.fun&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;¡Estaremos encantados de responder a tus preguntas, recibir tus sugerencias o simplemente charlar sobre la grandeza de nuestro líder!&lt;/p&gt;&#xA;&lt;h3 id=&#34;nuestras-redes-sociales&#34;&gt;Nuestras redes sociales&lt;/h3&gt;&#xA;&lt;p&gt;Desgraciadamente, estamos maquinando para poder adquirir los usernames @FeedTheLeader en las distintas plataformas, pero actualmente están ocupadas. En cuanto tengamos operativas nuestras redes sociales, las dejaremos en esta sección.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
