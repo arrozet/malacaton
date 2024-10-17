@@ -62,8 +62,13 @@
             filter: grayscale(100%);
         }
 
+        /* Estilos para el modo de texto morado */
+        .texto-morado {
+            color: #800080; /* Color morado para todo el texto */
+        }
+
         /* Botones de activación de estilos */
-        #toggle-contraste, #toggle-blanco-negro {
+        #toggle-contraste, #toggle-blanco-negro, #toggle-texto-morado {
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -103,65 +108,86 @@
     
     <!-- Botones para activar/desactivar los modos -->
     <button id="toggle-contraste">Activar Modo Alto Contraste</button>
-    <button id="toggle-blanco-negro">Activar Modo Blanco y Negro</button>
+    <button id="toggle-blanco-negro">Activar Modo Vintage</button>
+    <button id="toggle-texto-morado">Activar Modo Feminista</button>
 
-    <p>Este es un ejemplo de texto en la página. Puedes activar el modo de alto contraste o el modo blanco y negro (escala de grises) para ayudar a las personas con dificultades visuales.</p>
+    <p>Conocemos los problemas que pueden tener ciertas personas al navegar por nuestra web y nos sentimos comprometidos con ello. Por ello hemos decidido crear varios modos de accesibilidad para ayudarles.</p>
 
     <a href="#">Este es un enlace de ejemplo</a>
 
     <div>
-        <p>Elige entre los dos modos de accesibilidad disponibles: modo de alto contraste o modo de blanco y negro.</p>
+        <p>Elige entre los modos de accesibilidad disponibles: modo de alto contraste, modo de vintage o modo de feminista.</p>
     </div>
 
     <script>
         // Obtener los botones y el cuerpo del documento
         const toggleContraste = document.getElementById('toggle-contraste');
         const toggleBlancoNegro = document.getElementById('toggle-blanco-negro');
+        const toggleTextoMorado = document.getElementById('toggle-texto-morado');
         const body = document.body;
 
         // Estado de los modos
         let altoContrasteActivo = false;
         let blancoNegroActivo = false;
+        let textoMoradoActivo = false;
 
         // Función para activar/desactivar el modo de alto contraste
         toggleContraste.addEventListener('click', function() {
             if (altoContrasteActivo) {
-                // Si el modo de alto contraste está activado, lo desactivamos
                 body.classList.remove('alto-contraste');
                 toggleContraste.textContent = 'Activar Modo Alto Contraste';
             } else {
-                // Desactivamos el modo blanco y negro si está activo
-                if (blancoNegroActivo) {
-                    body.classList.remove('blanco-negro');
-                    toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
-                    blancoNegroActivo = false;
-                }
-                // Activamos el modo de alto contraste
+                desactivarOtrosModos();
                 body.classList.add('alto-contraste');
                 toggleContraste.textContent = 'Desactivar Modo Alto Contraste';
             }
             altoContrasteActivo = !altoContrasteActivo;
         });
 
-        // Función para activar/desactivar el modo blanco y negro (escala de grises)
+        // Función para activar/desactivar el modo blanco y negro
         toggleBlancoNegro.addEventListener('click', function() {
             if (blancoNegroActivo) {
-                // Si el modo blanco y negro está activado, lo desactivamos
                 body.classList.remove('blanco-negro');
-                toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
+                toggleBlancoNegro.textContent = 'Activar Modo Vintage';
             } else {
-                // Desactivamos el modo de alto contraste si está activo
-                if (altoContrasteActivo) {
-                    body.classList.remove('alto-contraste');
-                    toggleContraste.textContent = 'Activar Modo Alto Contraste';
-                    altoContrasteActivo = false;
-                }
-                // Activamos el modo blanco y negro
+                desactivarOtrosModos();
                 body.classList.add('blanco-negro');
-                toggleBlancoNegro.textContent = 'Desactivar Modo Blanco y Negro';
+                toggleBlancoNegro.textContent = 'Desactivar Modo Vintage';
             }
             blancoNegroActivo = !blancoNegroActivo;
         });
+
+        // Función para activar/desactivar el modo de texto morado
+        toggleTextoMorado.addEventListener('click', function() {
+            if (textoMoradoActivo) {
+                body.classList.remove('texto-morado');
+                toggleTextoMorado.textContent = 'Activar Modo Feminista';
+            } else {
+                desactivarOtrosModos();
+                body.classList.add('texto-morado');
+                toggleTextoMorado.textContent = 'Desactivar Modo Feminista';
+            }
+            textoMoradoActivo = !textoMoradoActivo;
+        });
+
+        // Función para desactivar otros modos activos
+        function desactivarOtrosModos() {
+            if (altoContrasteActivo) {
+                body.classList.remove('alto-contraste');
+                toggleContraste.textContent = 'Activar Modo Alto Contraste';
+                altoContrasteActivo = false;
+            }
+            if (blancoNegroActivo) {
+                body.classList.remove('blanco-negro');
+                toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
+                blancoNegroActivo = false;
+            }
+            if (textoMoradoActivo) {
+                body.classList.remove('texto-morado');
+                toggleTextoMorado.textContent = 'Activar Modo Texto Morado';
+                textoMoradoActivo = false;
+            }
+        }
     </script>
 
 </body>
@@ -215,118 +241,162 @@
 </div>
 <!--MAPA MUY EPICO FINAL-->
 
-<!--EPICIDAD CONCENTRADA PASO 1-->
+
+
+
+
+
+<!--ESPERATE QUE LA VOY A LIAR-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa Interactivo de Embalses</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
-  <style>
-    #map {
-      height: 500px;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo de Embalses</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        #info {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Selecciona un punto y un radio para filtrar los embalses</h2>
+    <h2>Mapa Interactivo de Embalses</h2>
+    <p>Haga clic en el mapa para seleccionar un punto. Luego, introduzca el radio (en kilómetros) para mostrar los embalses dentro de ese radio.</p>
 
-<!-- Input para el radio -->
-<label for="radio">Radio en km:</label>
-<input type="number" id="radio" value="50" min="1" max="200">
+    <label for="radio">Radio (km):</label>
+    <input type="number" id="radio" value="50" min="1" max="500">
+    <button id="buscar">Buscar Embalses</button>
 
-<div id="map"></div>
+    <div id="map"></div>
+    <div id="info"></div>
 
-<script>
-  let map;
-  let circle;
-  const embalses = [
-    { nombre: "Embalse 1", lat: 36.7213028, lng: -4.4216366 }, // Añade coordenadas reales
-    { nombre: "Embalse 2", lat: 36.7323028, lng: -4.4316366 },
-    // Añadir más embalses aquí...
-  ];
-  let markers = [];
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Inicializar el mapa centrado en España
+        var map = L.map('map').setView([40.416775, -3.703790], 6); // Coordenadas de Madrid
 
-  function initMap() {
-    // Inicializar el mapa centrado en Málaga
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: 36.7213028, lng: -4.4216366 },
-      zoom: 10
-    });
+        // Añadir una capa base de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
 
-    // Añadir marcadores de embalses al mapa
-    embalses.forEach(embalse => {
-      const marker = new google.maps.Marker({
-        position: { lat: embalse.lat, lng: embalse.lng },
-        map: map,
-        title: embalse.nombre
-      });
-      markers.push(marker);
-    });
+        // Añadir marcador en el lugar donde el usuario haga clic
+        var marcador = null;
+        map.on('click', function(e) {
+            if (marcador) {
+                map.removeLayer(marcador);
+            }
+            marcador = L.marker(e.latlng).addTo(map);
+            document.getElementById('info').innerHTML = `Punto seleccionado: Latitud: ${e.latlng.lat}, Longitud: ${e.latlng.lng}`;
+        });
 
-    // Evento de clic para definir el centro del círculo
-    map.addListener("click", function(event) {
-      const latLng = event.latLng;
-      dibujarCirculo(latLng);
-    });
-  }
+        // Datos de los embalses (extraídos del CSV)
+        var embalses = [
+    { nombre: "SALLENTE", lat: 42.500371, lng: 0.991460 },
+    { nombre: "CAZALEGAS", lat: 40.012987, lng: -4.706248 },
+    { nombre: "LAGO NEGRO", lat: 42.542286, lng: 1.040582 },
+    { nombre: "TORCAS, LAS", lat: 41.294686, lng: -1.087447 },
+    { nombre: "BUJEDA, LA", lat: 40.244501, lng: -2.835188 },
+    { nombre: "URKULU", lat: 43.0225055220001, lng: -2.47053633499996 },
+    { nombre: "SANTA EULALIA", lat: 42.3483453630001, lng: -7.06397987999998 },
+    { nombre: "CERVERA", lat: 42.8660505030001, lng: -4.52768060999995 },
+    { nombre: "MONTEFURADO", lat: 42.390996026, lng: -7.21834378999995 },
+    { nombre: "MONTIJO", lat: 38.9236610560001, lng: -6.42868094199997 },
+    { nombre: "AGUIJON, EL", lat: 38.473447859, lng: -6.92088528799997 },
+    { nombre: "SEQUEIROS", lat: 42.450804406, lng: -7.25122124099994 },
+    { nombre: "CREVILLENTE", lat: 38.2573070890001, lng: -0.791022540999961 },
+    { nombre: "ARLANZON", lat: 42.263942951, lng: -3.33957144699997 },
+    { nombre: "AGUEDA", lat: 40.529781939, lng: -6.48161367799997 },
+    { nombre: "VILLAR, EL", lat: 40.9474491760001, lng: -3.56294228099995 },
+    { nombre: "PUENTE PORTO", lat: 42.1158687330001, lng: -6.83043827699993 },
+    { nombre: "ALSA TORINA", lat: 43.0720798520001, lng: -4.01289343399998 },
+    { nombre: "ALSA TORINA", lat: 43.0947327860001, lng: -3.99995942799995 },
+    { nombre: "BAYCO, RAMBLA DE", lat: 38.6400374940001, lng: -1.50110869599996 },
+    { nombre: "CASASOLA", lat: 36.80441203, lng: -4.49571219199993 },
+    { nombre: "ACEÑA, LA", lat: 40.6125237900001, lng: -4.22148248499997 },
+    { nombre: "SANT PONC", lat: 41.9629241380001, lng: 1.60560158600003 },
+    { nombre: "HORNO TEJERO", lat: 39.1524666400001, lng: -6.43288892199996 },
+    { nombre: "LANUZA", lat: 42.750213783, lng: -0.314386454999976 },
+    { nombre: "LIMONERO, EL", lat: 36.758417373, lng: -4.43246489999996 },
+    { nombre: "PEÑA, LA", lat: 42.3833827130001, lng: -0.735549655999932 },
+    { nombre: "VAL", lat: 41.8757919440001, lng: -1.78697264699997 },
+    { nombre: "PUENTES IV", lat: 37.7347336080001, lng: -1.81922575299996 },
+    { nombre: "CANCHALES, LOS", lat: 38.964354455, lng: -6.52263624799997 },
+    { nombre: "BENIARRES", lat: 38.8149169910001, lng: -0.356155444999956 },
+    { nombre: "CASTRO", lat: 41.57537726, lng: -6.18722467599997 },
+    { nombre: "CUERDA DEL POZO", lat: 41.875818591, lng: -2.70401966899993 },
+    { nombre: "CERNADILLA", lat: 42.0191548230001, lng: -6.45932291799994 },
+    { nombre: "CEDILLO", lat: 39.663782181, lng: -7.53999733599994 },
+    { nombre: "PUENTE NUEVO", lat: 38.08606718, lng: -4.92546965099996 },
+    { nombre: "PORTODEMOUROS", lat: 42.856207614, lng: -8.19033879699998 },
+    { nombre: "ZUJAR", lat: 38.917254642, lng: -5.47935710499996 },
+    { nombre: "ZUJAR", lat: 38.9195069310001, lng: -5.48063497099997 },
+    { nombre: "BARRIOS DE LUNA", lat: 42.8497176120001, lng: -5.86372470099997 },
+    { nombre: "JUAN BENET", lat: 42.9289238740001, lng: -5.29306586099995 },
+    { nombre: "JANDULA", lat: 38.2247732230001, lng: -3.97405826899995 },
+    { nombre: "VALDECAÑAS", lat: 39.7781074380001, lng: -5.61185123699994 },
+    { nombre: "CIJARA", lat: 39.373622884, lng: -5.01612487499995 },
+    { nombre: "CASPE", lat: 41.2470170710001, lng: -0.057856813999933 },
+    { nombre: "BUENDIA", lat: 40.3992227420001, lng: -2.78382182099995 },
+    { nombre: "ALMENDRA", lat: 41.2714941880001, lng: -6.32020866599993 },
+    { nombre: "SERENA, LA", lat: 38.9127291240001, lng: -5.41330542299994 },
+    { nombre: "CANELLES", lat: 41.9785559910001, lng: 0.612325865000059 },
+    { nombre: "BAUTISTA, LA", lat: 37.6571849600001, lng: -5.63911754499998 },
+    { nombre: "GUADALCACIN II", lat: 36.6680511050001, lng: -5.78680409799995 },
+    { nombre: "ENTREPEÑAS", lat: 40.4930851390001, lng: -2.75082189599993 },
+    { nombre: "ORELLANA", lat: 38.986024098, lng: -5.53804342499996 }
+];
 
-  function dibujarCirculo(latLng) {
-    const radio = document.getElementById("radio").value * 1000; // Convertir a metros
+        // Función para calcular la distancia entre dos puntos (en kilómetros)
+        function calcularDistancia(lat1, lng1, lat2, lng2) {
+            var R = 6371; // Radio de la Tierra en km
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLng = (lng2 - lng1) * Math.PI / 180;
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                    Math.sin(dLng/2) * Math.sin(dLng/2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c; // Distancia en km
+        }
 
-    // Eliminar el círculo anterior
-    if (circle) {
-      circle.setMap(null);
-    }
+        // Evento para buscar los embalses dentro del radio
+        document.getElementById('buscar').addEventListener('click', function() {
+            if (!marcador) {
+                alert("Seleccione un punto en el mapa.");
+                return;
+            }
 
-    // Dibujar el círculo
-    circle = new google.maps.Circle({
-      center: latLng,
-      radius: radio,
-      map: map,
-      fillColor: "#FF0000",
-      fillOpacity: 0.3,
-      strokeColor: "#FF0000",
-      strokeOpacity: 0.8,
-      strokeWeight: 2
-    });
+            var radio = parseFloat(document.getElementById('radio').value);
+            var latLng = marcador.getLatLng();
+            var embalsesDentroDelRadio = embalses.filter(function(embalse) {
+                var distancia = calcularDistancia(latLng.lat, latLng.lng, embalse.lat, embalse.lng);
+                return distancia <= radio;
+            });
 
-    // Filtrar y mostrar solo los embalses dentro del círculo
-    filtrarEmbalses(latLng, radio);
-  }
+            // Limpiar resultados previos
+            document.getElementById('info').innerHTML = "<h3>Embalses dentro del radio:</h3>";
 
-  function filtrarEmbalses(centro, radio) {
-    const R = 6371e3; // Radio de la Tierra en metros
+            // Mostrar los embalses encontrados
+            embalsesDentroDelRadio.forEach(function(embalse) {
+                document.getElementById('info').innerHTML += `<p>${embalse.nombre} - Latitud: ${embalse.lat}, Longitud: ${embalse.lng}</p>`;
+            });
 
-    markers.forEach(marker => {
-      const distancia = google.maps.geometry.spherical.computeDistanceBetween(
-        new google.maps.LatLng(centro.lat(), centro.lng()), 
-        marker.getPosition()
-      );
+            if (embalsesDentroDelRadio.length === 0) {
+                document.getElementById('info').innerHTML += "<p>No se encontraron embalses dentro del radio seleccionado.</p>";
+            }
+        });
 
-      // Mostrar solo los marcadores dentro del radio
-      if (distancia <= radio) {
-        marker.setMap(map);
-      } else {
-        marker.setMap(null);
-      }
-    });
-  }
-
-  window.onload = initMap;
-</script>
+    </script>
 
 </body>
 </html>
-
-<!--EPICIDAD CONCENTRADA FINAL-->
-
-
-
-
+<!--LA HE LIADO-->
 
 
 
