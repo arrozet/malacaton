@@ -1,4 +1,4 @@
-baseURL = 'none'
+baseURL = 'http://localhost:1313/'
 title = 'DAJER'
 
 timeZone = 'Europe/Madrid'
