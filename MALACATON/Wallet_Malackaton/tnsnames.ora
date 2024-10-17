@@ -1,0 +1,12 @@
+malackaton_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-marseille-1.oraclecloud.com))(connect_data=(service_name=g4feb4b88427ce8_malackaton_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+malackaton_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-marseille-1.oraclecloud.com))(connect_data=(service_name=g4feb4b88427ce8_malackaton_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+malackaton_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-marseille-1.oraclecloud.com))(connect_data=(service_name=g4feb4b88427ce8_malackaton_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+malackaton_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-marseille-1.oraclecloud.com))(connect_data=(service_name=g4feb4b88427ce8_malackaton_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+malackaton_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-marseille-1.oraclecloud.com))(connect_data=(service_name=g4feb4b88427ce8_malackaton_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+

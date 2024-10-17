@@ -1,0 +1,12 @@
+Malacatón: APLICACIÓN WEB
+
+Oracle DataBase
+
+Cargar datos: MINUTO 20 VIDEO
+	Load datos, Archivo Local, Nos Darán un CSV
+
+Administrar Datos: MINUTO 25 VIDEO
+	SQL (ES IGUAL QUE SQL DEVELOPER)
+	Click Derecho Nuestra Base de datos -> Rest -> Rest enable
+	API, para los SELECTS INSERTS ….
+
