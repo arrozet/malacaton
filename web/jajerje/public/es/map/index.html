@@ -200,48 +200,6 @@
 <!--MODO DALTONICO-->
 
 
-<!--METER NUMERO INICIO -->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduzca el radio deseado en km:</title>
-</head>
-<body>
-    <h2>Introduzca el radio deseado en km:</h2>
-    
-    <form action="#" method="post">
-        <label for="numero">Radio:</label>
-        <input type="number" id="numero" name="numero" min="1" max="2000" step="1" required>
-        <br><br>
-        <input type="submit" value="Enviar">
-    </form>
-
-</body>
-</html>
-
-<!--METER INICIO FINAL-->
-
-<!--MAPA MUY EPICO INICIO-->
-</header>
-  <main>
-  <h1 id="mapa-de-los-embalses">Mapa de los embalses</h1>
-<p>Aquí está el mapa interactivo con los datos de los embalses en la zona:</p>
-<div style="width: 100%; height: 400px;">
-  <iframe
-       src="https://www.google.com/maps/d/embed?mid=1HwErjuzpULlb-kTe_mxMk6maT8wXjZ8&ehbc=2E312F&noprof=1" 
-       width="100%" 
-       height="100%" 
-       frameborder="0" 
-       style="border:0;" 
-       allowfullscreen="">
-  </iframe>
-</div>
-<!--MAPA MUY EPICO FINAL-->
-
-
 
 
 
@@ -252,7 +210,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interactivo de Embalses</title>
+    <title>Mapa Interactivo de Embalses con API</title>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map {
@@ -272,6 +231,7 @@
     <label for="radio">Radio (km):</label>
     <input type="number" id="radio" value="50" min="1" max="500">
     <button id="buscar">Buscar Embalses</button>
+    <button id="ubicacion">Usar mi ubicación</button>
 
     <div id="map"></div>
     <div id="info"></div>
@@ -288,70 +248,40 @@
 
         // Añadir marcador en el lugar donde el usuario haga clic
         var marcador = null;
+        var circulo = null;
+        var embalses = []; // Aquí se almacenarán los embalses obtenidos de la API
+        var marcadoresEmbalses = [];
+
+        // Cargar embalses desde la API
+        async function cargarEmbalses() {
+            try {
+                let response = await fetch("https://g4feb4b88427ce8-malackaton.adb.eu-marseille-1.oraclecloudapps.com/ords/admin/vista_embalses/?limit=10000");
+                let data = await response.json();
+                embalses = data.items.map(item => ({
+                    nombre: item.nombre,
+                    lat: parseFloat(item.x),
+                    lng: parseFloat(item.y)
+                }));
+                console.log("Embalses cargados desde la API:", embalses);
+            } catch (error) {
+                console.error("Error al cargar los embalses:", error);
+            }
+        }
+
+        // Llamar a la función para cargar los embalses desde la API
+        cargarEmbalses();
+
+        // Evento de clic para seleccionar el punto en el mapa
         map.on('click', function(e) {
             if (marcador) {
                 map.removeLayer(marcador);
             }
+            if (circulo) {
+                map.removeLayer(circulo);
+            }
             marcador = L.marker(e.latlng).addTo(map);
             document.getElementById('info').innerHTML = `Punto seleccionado: Latitud: ${e.latlng.lat}, Longitud: ${e.latlng.lng}`;
         });
-
-        // Datos de los embalses (extraídos del CSV)
-        var embalses = [
-    { nombre: "SALLENTE", lat: 42.500371, lng: 0.991460 },
-    { nombre: "CAZALEGAS", lat: 40.012987, lng: -4.706248 },
-    { nombre: "LAGO NEGRO", lat: 42.542286, lng: 1.040582 },
-    { nombre: "TORCAS, LAS", lat: 41.294686, lng: -1.087447 },
-    { nombre: "BUJEDA, LA", lat: 40.244501, lng: -2.835188 },
-    { nombre: "URKULU", lat: 43.0225055220001, lng: -2.47053633499996 },
-    { nombre: "SANTA EULALIA", lat: 42.3483453630001, lng: -7.06397987999998 },
-    { nombre: "CERVERA", lat: 42.8660505030001, lng: -4.52768060999995 },
-    { nombre: "MONTEFURADO", lat: 42.390996026, lng: -7.21834378999995 },
-    { nombre: "MONTIJO", lat: 38.9236610560001, lng: -6.42868094199997 },
-    { nombre: "AGUIJON, EL", lat: 38.473447859, lng: -6.92088528799997 },
-    { nombre: "SEQUEIROS", lat: 42.450804406, lng: -7.25122124099994 },
-    { nombre: "CREVILLENTE", lat: 38.2573070890001, lng: -0.791022540999961 },
-    { nombre: "ARLANZON", lat: 42.263942951, lng: -3.33957144699997 },
-    { nombre: "AGUEDA", lat: 40.529781939, lng: -6.48161367799997 },
-    { nombre: "VILLAR, EL", lat: 40.9474491760001, lng: -3.56294228099995 },
-    { nombre: "PUENTE PORTO", lat: 42.1158687330001, lng: -6.83043827699993 },
-    { nombre: "ALSA TORINA", lat: 43.0720798520001, lng: -4.01289343399998 },
-    { nombre: "ALSA TORINA", lat: 43.0947327860001, lng: -3.99995942799995 },
-    { nombre: "BAYCO, RAMBLA DE", lat: 38.6400374940001, lng: -1.50110869599996 },
-    { nombre: "CASASOLA", lat: 36.80441203, lng: -4.49571219199993 },
-    { nombre: "ACEÑA, LA", lat: 40.6125237900001, lng: -4.22148248499997 },
-    { nombre: "SANT PONC", lat: 41.9629241380001, lng: 1.60560158600003 },
-    { nombre: "HORNO TEJERO", lat: 39.1524666400001, lng: -6.43288892199996 },
-    { nombre: "LANUZA", lat: 42.750213783, lng: -0.314386454999976 },
-    { nombre: "LIMONERO, EL", lat: 36.758417373, lng: -4.43246489999996 },
-    { nombre: "PEÑA, LA", lat: 42.3833827130001, lng: -0.735549655999932 },
-    { nombre: "VAL", lat: 41.8757919440001, lng: -1.78697264699997 },
-    { nombre: "PUENTES IV", lat: 37.7347336080001, lng: -1.81922575299996 },
-    { nombre: "CANCHALES, LOS", lat: 38.964354455, lng: -6.52263624799997 },
-    { nombre: "BENIARRES", lat: 38.8149169910001, lng: -0.356155444999956 },
-    { nombre: "CASTRO", lat: 41.57537726, lng: -6.18722467599997 },
-    { nombre: "CUERDA DEL POZO", lat: 41.875818591, lng: -2.70401966899993 },
-    { nombre: "CERNADILLA", lat: 42.0191548230001, lng: -6.45932291799994 },
-    { nombre: "CEDILLO", lat: 39.663782181, lng: -7.53999733599994 },
-    { nombre: "PUENTE NUEVO", lat: 38.08606718, lng: -4.92546965099996 },
-    { nombre: "PORTODEMOUROS", lat: 42.856207614, lng: -8.19033879699998 },
-    { nombre: "ZUJAR", lat: 38.917254642, lng: -5.47935710499996 },
-    { nombre: "ZUJAR", lat: 38.9195069310001, lng: -5.48063497099997 },
-    { nombre: "BARRIOS DE LUNA", lat: 42.8497176120001, lng: -5.86372470099997 },
-    { nombre: "JUAN BENET", lat: 42.9289238740001, lng: -5.29306586099995 },
-    { nombre: "JANDULA", lat: 38.2247732230001, lng: -3.97405826899995 },
-    { nombre: "VALDECAÑAS", lat: 39.7781074380001, lng: -5.61185123699994 },
-    { nombre: "CIJARA", lat: 39.373622884, lng: -5.01612487499995 },
-    { nombre: "CASPE", lat: 41.2470170710001, lng: -0.057856813999933 },
-    { nombre: "BUENDIA", lat: 40.3992227420001, lng: -2.78382182099995 },
-    { nombre: "ALMENDRA", lat: 41.2714941880001, lng: -6.32020866599993 },
-    { nombre: "SERENA, LA", lat: 38.9127291240001, lng: -5.41330542299994 },
-    { nombre: "CANELLES", lat: 41.9785559910001, lng: 0.612325865000059 },
-    { nombre: "BAUTISTA, LA", lat: 37.6571849600001, lng: -5.63911754499998 },
-    { nombre: "GUADALCACIN II", lat: 36.6680511050001, lng: -5.78680409799995 },
-    { nombre: "ENTREPEÑAS", lat: 40.4930851390001, lng: -2.75082189599993 },
-    { nombre: "ORELLANA", lat: 38.986024098, lng: -5.53804342499996 }
-];
 
         // Función para calcular la distancia entre dos puntos (en kilómetros)
         function calcularDistancia(lat1, lng1, lat2, lng2) {
@@ -365,6 +295,50 @@
             return R * c; // Distancia en km
         }
 
+        // Función para mostrar los embalses dentro del radio y dibujar el círculo
+        function mostrarEmbalsesDentroDelRadio(latLng, radio) {
+            // Eliminar marcadores anteriores de embalses
+            marcadoresEmbalses.forEach(function(marker) {
+                map.removeLayer(marker);
+            });
+            marcadoresEmbalses = [];
+
+            // Eliminar el círculo anterior si existe
+            if (circulo) {
+                map.removeLayer(circulo);
+            }
+
+            // Dibujar el círculo en el mapa
+            circulo = L.circle(latLng, {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.2,
+                radius: radio * 1000 // Convertir km a metros
+            }).addTo(map);
+
+            var embalsesDentroDelRadio = embalses.filter(function(embalse) {
+                var distancia = calcularDistancia(latLng.lat, latLng.lng, embalse.lat, embalse.lng);
+                return distancia <= radio;
+            });
+
+            // Limpiar resultados previos
+            document.getElementById('info').innerHTML = "<h3>Embalses dentro del radio:</h3>";
+
+            // Mostrar los embalses encontrados y añadir marcadores en el mapa
+            if (embalsesDentroDelRadio.length === 0) {
+                document.getElementById('info').innerHTML += "<p>No se encontraron embalses dentro del radio seleccionado.</p>";
+            } else {
+                embalsesDentroDelRadio.forEach(function(embalse) {
+                    document.getElementById('info').innerHTML += `<p>${embalse.nombre} - Latitud: ${embalse.lat}, Longitud: ${embalse.lng}</p>`;
+                    
+                    // Añadir marcadores de embalses al mapa
+                    var marker = L.marker([embalse.lat, embalse.lng]).addTo(map);
+                    marker.bindTooltip(embalse.nombre); // Mostrar nombre al pasar el ratón
+                    marcadoresEmbalses.push(marker);
+                });
+            }
+        }
+
         // Evento para buscar los embalses dentro del radio
         document.getElementById('buscar').addEventListener('click', function() {
             if (!marcador) {
@@ -374,21 +348,33 @@
 
             var radio = parseFloat(document.getElementById('radio').value);
             var latLng = marcador.getLatLng();
-            var embalsesDentroDelRadio = embalses.filter(function(embalse) {
-                var distancia = calcularDistancia(latLng.lat, latLng.lng, embalse.lat, embalse.lng);
-                return distancia <= radio;
-            });
 
-            // Limpiar resultados previos
-            document.getElementById('info').innerHTML = "<h3>Embalses dentro del radio:</h3>";
+            mostrarEmbalsesDentroDelRadio(latLng, radio);
+        });
 
-            // Mostrar los embalses encontrados
-            embalsesDentroDelRadio.forEach(function(embalse) {
-                document.getElementById('info').innerHTML += `<p>${embalse.nombre} - Latitud: ${embalse.lat}, Longitud: ${embalse.lng}</p>`;
-            });
+        // Función para obtener la ubicación actual del usuario
+        document.getElementById('ubicacion').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
 
-            if (embalsesDentroDelRadio.length === 0) {
-                document.getElementById('info').innerHTML += "<p>No se encontraron embalses dentro del radio seleccionado.</p>";
+                    if (marcador) {
+                        map.removeLayer(marcador);
+                    }
+                    if (circulo) {
+                        map.removeLayer(circulo);
+                    }
+
+                    // Añadir un marcador y centrar el mapa en la ubicación actual del usuario
+                    marcador = L.marker([lat, lng]).addTo(map);
+                    map.setView([lat, lng], 10); // Ajusta el nivel de zoom a 10
+                    document.getElementById('info').innerHTML = `Ubicación actual: Latitud: ${lat}, Longitud: ${lng}`;
+                }, function(error) {
+                    alert("Error al obtener la ubicación.");
+                });
+            } else {
+                alert("Geolocalización no soportada por este navegador.");
             }
         });
 
