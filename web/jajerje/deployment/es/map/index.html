@@ -15,7 +15,7 @@
   <meta property="og:title" content="DAJER">
   <meta property="og:description" content="A sustainable approach to water management ">
   <meta property="og:image" content="https://jajerje.fun/favicon.ico">
-  <meta property="og:url" content="https://jajerje.fun//">
+  <meta property="og:url" content="http://jajerje.fun/">
   <meta property="og:type" content="website">
   
 </head>
@@ -31,6 +31,88 @@
     <li><a href="/es" title="">Inicio</a></li><li><a href="/es/map" title="">Mapa interactivo</a></li><li><a href="/es/analysis" title="">Análisis</a></li><li><a href="/es/contact" title="">Contacto</a></li><li><a href="/es/whoarewe" title="">¿Quiénes somos?</a></li>
   </ul>
 </nav>
+
+<!--CAMBIAR TAMAÑO DE LETRA-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar tamaño de fuente</title>
+    <style>
+        body {
+            font-size: 16px; /* Tamaño base de la fuente */
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .controls button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Control de Tamaño de Fuente</h2>
+    <p>Utilice los botones para cambiar el tamaño de la fuente en toda la página.</p>
+
+    <!-- Botones para cambiar el tamaño de la fuente -->
+    <div class="controls">
+        <button id="aumentarFuente">Aumentar fuente</button>
+        <button id="disminuirFuente">Disminuir fuente</button>
+        <button id="restablecerFuente">Restablecer fuente</button>
+    </div>
+
+    <p>Intenta ajustar el tamaño para ver cómo cambia la fuente de toda la página.</p>
+
+    <script>
+        // Tamaño de fuente base
+        let fontSize = 16;
+        const fontSizeMax = 40; // Tamaño máximo de fuente
+        const fontSizeMin = 5;  // Tamaño mínimo de fuente
+        const incremento = 5;   // Incremento o decremento rápido
+
+        // Función para cambiar el tamaño de la fuente
+        function cambiarTamanoFuente(cambio) {
+            fontSize += cambio;
+
+            // Limitar el tamaño de la fuente entre 5 y 40 píxeles
+            if (fontSize > fontSizeMax) {
+                fontSize = fontSizeMax;
+            } else if (fontSize < fontSizeMin) {
+                fontSize = fontSizeMin;
+            }
+
+            document.body.style.fontSize = fontSize + 'px';
+        }
+
+        // Restablecer el tamaño de fuente al valor base
+        function restablecerTamanoFuente() {
+            fontSize = 16;
+            document.body.style.fontSize = fontSize + 'px';
+        }
+
+        // Evento para aumentar el tamaño de la fuente
+        document.getElementById('aumentarFuente').addEventListener('click', function() {
+            cambiarTamanoFuente(incremento); // Aumenta el tamaño de la fuente en 5px
+        });
+
+        // Evento para disminuir el tamaño de la fuente
+        document.getElementById('disminuirFuente').addEventListener('click', function() {
+            cambiarTamanoFuente(-incremento); // Disminuye el tamaño de la fuente en 5px
+        });
+
+        // Evento para restablecer el tamaño de la fuente al valor base
+        document.getElementById('restablecerFuente').addEventListener('click', function() {
+            restablecerTamanoFuente(); // Restablece el tamaño de la fuente a 16px
+        });
+    </script>
+
+</body>
+</html>
+
+<!--CAMBIAR TAMAÑO LETRA FIN-->
 
 <!--MODO VINTAGE-->
 
@@ -62,13 +144,24 @@
             filter: grayscale(100%);
         }
 
-        /* Estilos para el modo de texto morado */
-        .texto-morado {
-            color: #800080; /* Color morado para todo el texto */
+        /* Estilos para el modo de alto contraste claro */
+        .contraste-claro {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #000000; /* Texto negro */
+        }
+
+        .contraste-claro button {
+            background-color: #000000; /* Fondo negro para el botón */
+            color: #ffffff; /* Texto blanco en el botón */
+            border: 2px solid #000000; /* Borde negro visible */
+        }
+
+        .contraste-claro a {
+            color: #ff0000; /* Enlaces de color rojo */
         }
 
         /* Botones de activación de estilos */
-        #toggle-contraste, #toggle-blanco-negro, #toggle-texto-morado {
+        #toggle-contraste, #toggle-blanco-negro, #toggle-contraste-claro {
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -83,7 +176,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #ffffff; /* Fondo blanco normal */
-            color: #000000; /* Texto negro predeterminado */
+            color: #A9A9A9; /* Texto gris claro predeterminado */
         }
 
         /* Estilos normales para botones */
@@ -109,27 +202,21 @@
     <!-- Botones para activar/desactivar los modos -->
     <button id="toggle-contraste">Activar Modo Alto Contraste</button>
     <button id="toggle-blanco-negro">Activar Modo Vintage</button>
-    <button id="toggle-texto-morado">Activar Modo Feminista</button>
+    <button id="toggle-contraste-claro">Activar Modo Alto Contraste Claro</button>
 
     <p>Conocemos los problemas que pueden tener ciertas personas al navegar por nuestra web y nos sentimos comprometidos con ello. Por ello hemos decidido crear varios modos de accesibilidad para ayudarles.</p>
-
-    <a href="#">Este es un enlace de ejemplo</a>
-
-    <div>
-        <p>Elige entre los modos de accesibilidad disponibles: modo de alto contraste, modo de vintage o modo de feminista.</p>
-    </div>
 
     <script>
         // Obtener los botones y el cuerpo del documento
         const toggleContraste = document.getElementById('toggle-contraste');
         const toggleBlancoNegro = document.getElementById('toggle-blanco-negro');
-        const toggleTextoMorado = document.getElementById('toggle-texto-morado');
+        const toggleContrasteClaro = document.getElementById('toggle-contraste-claro');
         const body = document.body;
 
         // Estado de los modos
         let altoContrasteActivo = false;
         let blancoNegroActivo = false;
-        let textoMoradoActivo = false;
+        let contrasteClaroActivo = false;
 
         // Función para activar/desactivar el modo de alto contraste
         toggleContraste.addEventListener('click', function() {
@@ -157,17 +244,17 @@
             blancoNegroActivo = !blancoNegroActivo;
         });
 
-        // Función para activar/desactivar el modo de texto morado
-        toggleTextoMorado.addEventListener('click', function() {
-            if (textoMoradoActivo) {
-                body.classList.remove('texto-morado');
-                toggleTextoMorado.textContent = 'Activar Modo Feminista';
+        // Función para activar/desactivar el modo de alto contraste claro
+        toggleContrasteClaro.addEventListener('click', function() {
+            if (contrasteClaroActivo) {
+                body.classList.remove('contraste-claro');
+                toggleContrasteClaro.textContent = 'Activar Modo Alto Contraste Claro';
             } else {
                 desactivarOtrosModos();
-                body.classList.add('texto-morado');
-                toggleTextoMorado.textContent = 'Desactivar Modo Feminista';
+                body.classList.add('contraste-claro');
+                toggleContrasteClaro.textContent = 'Desactivar Modo Alto Contraste Claro';
             }
-            textoMoradoActivo = !textoMoradoActivo;
+            contrasteClaroActivo = !contrasteClaroActivo;
         });
 
         // Función para desactivar otros modos activos
@@ -179,13 +266,13 @@
             }
             if (blancoNegroActivo) {
                 body.classList.remove('blanco-negro');
-                toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
+                toggleBlancoNegro.textContent = 'Activar Modo Vintage';
                 blancoNegroActivo = false;
             }
-            if (textoMoradoActivo) {
-                body.classList.remove('texto-morado');
-                toggleTextoMorado.textContent = 'Activar Modo Texto Morado';
-                textoMoradoActivo = false;
+            if (contrasteClaroActivo) {
+                body.classList.remove('contraste-claro');
+                toggleContrasteClaro.textContent = 'Activar Modo Alto Contraste Claro';
+                contrasteClaroActivo = false;
             }
         }
     </script>
@@ -193,11 +280,69 @@
 </body>
 </html>
 
-<!--MODO VINTAGE-->
 
-<!--MODO DALTONICO-->
+<!--MODO VINTAGE FIN-->
 
-<!--MODO DALTONICO-->
+<!--LEIDA EN VOZ ALTA-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura en Voz Alta</title>
+    <style>
+        /* Botones para la lectura en voz alta */
+        #read-aloud, #stop-reading {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #stop-reading {
+            background-color: #dc3545; /* Botón de detener en rojo */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lectura en Voz Alta</h2>
+    
+    <p>Este texto será leído en voz alta cuando pulses el botón. Puedes detener la lectura en cualquier momento usando el botón de "Detener".</p>
+
+    <!-- Botones para leer y detener la lectura -->
+    <button id="read-aloud">Leer en Voz Alta</button>
+    <button id="stop-reading">Detener</button>
+
+    <script>
+        // Crear una instancia de SpeechSynthesisUtterance para la lectura en voz alta
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = document.body.innerText; // Lee todo el texto del cuerpo de la página
+
+        // Configuraciones opcionales de la voz (idioma predeterminado del navegador)
+        speech.lang = 'es-ES'; // Cambia según el idioma si es necesario
+        speech.rate = 1; // Velocidad normal
+        speech.pitch = 1; // Tono normal
+
+        // Función para leer el contenido de la página en voz alta
+        document.getElementById('read-aloud').addEventListener('click', function() {
+            window.speechSynthesis.speak(speech);
+        });
+
+        // Función para detener la lectura en voz alta
+        document.getElementById('stop-reading').addEventListener('click', function() {
+            window.speechSynthesis.cancel(); // Detiene cualquier síntesis de voz en curso
+        });
+    </script>
+
+</body>
+</html>
+
+<!--LEIDA EN VOZ ALTA FINAL-->
 
 
 
@@ -220,6 +365,23 @@
         }
         #info {
             margin: 20px 0;
+        }
+        .embalse-info {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .embalse-info h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .embalse-info a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .embalse-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -260,7 +422,17 @@
                 embalses = data.items.map(item => ({
                     nombre: item.nombre,
                     lat: parseFloat(item.x),
-                    lng: parseFloat(item.y)
+                    lng: parseFloat(item.y),
+                    codigo: item.codigo, // Código del embalse para relacionarlo con la predicción
+                    embalse: item.embalse,
+                    demarc: item.demarc,
+                    cauce: item.cauce,
+                    provincia: item.provincia,
+                    ccaa: item.ccaa,
+                    tipo: item.tipo,
+                    cota_coron: item.cota_coron,
+                    alt_cimien: item.alt_cimien,
+                    informe: item.informe
                 }));
                 console.log("Embalses cargados desde la API:", embalses);
             } catch (error) {
@@ -329,13 +501,75 @@
                 document.getElementById('info').innerHTML += "<p>No se encontraron embalses dentro del radio seleccionado.</p>";
             } else {
                 embalsesDentroDelRadio.forEach(function(embalse) {
-                    document.getElementById('info').innerHTML += `<p>${embalse.nombre} - Latitud: ${embalse.lat}, Longitud: ${embalse.lng}</p>`;
+                    document.getElementById('info').innerHTML += `
+                    <div class="embalse-info">
+                        <h4>${embalse.nombre}</h4>
+                        ${embalse.provincia ? `<p><strong>Provincia:</strong> ${embalse.provincia}</p>` : ""}
+                        ${embalse.ccaa ? `<p><strong>CCAA:</strong> ${embalse.ccaa}</p>` : ""}
+                        ${embalse.cauce ? `<p><strong>Cauce:</strong> ${embalse.cauce}</p>` : ""}
+                        ${embalse.tipo ? `<p><strong>Tipo:</strong> ${embalse.tipo}</p>` : ""}
+                        ${embalse.cota_coron ? `<p><strong>Cota Coronación:</strong> ${embalse.cota_coron} m</p>` : ""}
+                        ${embalse.alt_cimien ? `<p><strong>Altura Cimientos:</strong> ${embalse.alt_cimien} m</p>` : ""}
+                        ${embalse.informe ? `<p><a href="${embalse.informe}" target="_blank">Informe Detallado</a></p>` : ""}
+                    </div>`;
                     
                     // Añadir marcadores de embalses al mapa
                     var marker = L.marker([embalse.lat, embalse.lng]).addTo(map);
                     marker.bindTooltip(embalse.nombre); // Mostrar nombre al pasar el ratón
+                    marker.on('click', function() {
+                        mostrarDetallesEmbalse(embalse);
+                    });
                     marcadoresEmbalses.push(marker);
                 });
+            }
+        }
+
+        // Mostrar detalles del embalse al hacer clic en el marcador
+        function mostrarDetallesEmbalse(embalse) {
+            document.getElementById('info').innerHTML = `
+            <div class="embalse-info">
+                <h4>${embalse.nombre}</h4>
+                ${embalse.provincia ? `<p><strong>Provincia:</strong> ${embalse.provincia}</p>` : ""}
+                ${embalse.ccaa ? `<p><strong>CCAA:</strong> ${embalse.ccaa}</p>` : ""}
+                ${embalse.cauce ? `<p><strong>Cauce:</strong> ${embalse.cauce}</p>` : ""}
+                ${embalse.tipo ? `<p><strong>Tipo:</strong> ${embalse.tipo}</p>` : ""}
+                ${embalse.cota_coron ? `<p><strong>Cota Coronación:</strong> ${embalse.cota_coron} m</p>` : ""}
+                ${embalse.alt_cimien ? `<p><strong>Altura Cimientos:</strong> ${embalse.alt_cimien} m</p>` : ""}
+                ${embalse.informe ? `<p><a href="${embalse.informe}" target="_blank">Informe Detallado</a></p>` : ""}
+            </div>`;
+
+            // Llamar a la API de predicciones para obtener los datos de sequía y predicción de agua
+            obtenerPrediccionEmbalse(embalse.codigo);
+        }
+
+        // Función para obtener la predicción del embalse desde la API de predicciones
+        async function obtenerPrediccionEmbalse(codigoEmbalse) {
+            try {
+                let response = await fetch("https://g4feb4b88427ce8-malackaton.adb.eu-marseille-1.oraclecloudapps.com/ords/admin/predicciones/?limit=10000");
+                let data = await response.json();
+
+                // Filtrar las predicciones para el embalse con el código especificado
+                let predicciones = data.items.filter(item => item.codigo_embalse === codigoEmbalse);
+
+                // Si no hay predicciones, mostrar un mensaje
+                if (predicciones.length === 0) {
+                    document.getElementById('info').innerHTML += `<p>No hay predicciones disponibles para este embalse.</p>`;
+                    return;
+                }
+
+                // Mostrar las predicciones encontradas
+                predicciones.forEach(prediccion => {
+                    let prediccionSequía = prediccion.prediccion_sequia === "True" ? "Sí" : "No";
+                    document.getElementById('info').innerHTML += `
+                    <div class="embalse-info">
+                        <h4>Predicción para el mes: ${new Date(prediccion.fecha).toLocaleDateString()}</h4>
+                        <p><strong>Predicción de agua:</strong> ${prediccion.prediccion_agua} hm³</p>
+                        <p><strong>¿Será necesario trasvase?</strong> ${prediccionSequía}</p>
+                    </div>`;
+                });
+            } catch (error) {
+                console.error("Error al obtener la predicción del embalse:", error);
+                document.getElementById('info').innerHTML += `<p>Error al obtener la predicción para este embalse.</p>`;
             }
         }
 
@@ -382,6 +616,7 @@
 
 </body>
 </html>
+
 <!--LA HE LIADO-->
 
 
