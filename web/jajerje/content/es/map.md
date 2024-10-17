@@ -1,21 +1,20 @@
 ---
-title: ¡Descárgame!
-description: Descarga nuestros jueguitos
+title: "Mapa de Embalses"
+date: 2024-10-17
+draft: false
 ---
 
-# Descarga
-Actualmente, _Feed The Leader_ solo puede ser ejecutado en un ordenador corriendo el sistema operativo Windows. En un futuro cercano esperamos poder desplegar el ideario del líder en otras plataformas.
+# Mapa de los embalses
 
-Para descargarlo, pulsa el siguiente botón:
+Aquí está el mapa interactivo con los datos de los embalses en la zona:
 
-[![Descarga ahora](/assets/download.png)](/assets/v0_1.zip)
-
-
-
-### Instalación
-La instalación es muy simple. Si sigues estos pasos, no te perderás. Te lo aseguro.
-1. Descarga el archivo desde el botón de arriba. Verás que se te ha descargado un archivo con la extensión zip. ¡Vamos bien!
-2. Descomprime el archivo en tu lugar favorito. Para ello tendrás que dar clic derecho sobre el archivo y descomprimirlo con tu herramienta preferida.
-3. Abre la carpeta que ha aparecido tras extraer el archivo.
-4. Ejecuta ``FeedTheLeader.exe``.
-5. ¡Y a disfrutar!
+<div style="width: 100%; height: 400px;">
+   <iframe
+        src="https://www.google.com/maps/d/embed?mid=1HwErjuzpULlb-kTe_mxMk6maT8wXjZ8&ehbc=2E312F&noprof=1" 
+        width="100%" 
+        height="100%" 
+        frameborder="0" 
+        style="border:0;" 
+        allowfullscreen="">
+   </iframe>
+</div>
