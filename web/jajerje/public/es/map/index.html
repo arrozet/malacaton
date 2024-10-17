@@ -32,6 +32,173 @@
   </ul>
 </nav>
 
+<!--MODO VINTAGE-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modos de Accesibilidad</title>
+    <style>
+        /* Estilos para el modo de alto contraste */
+        .alto-contraste {
+            background-color: #000000; /* Fondo negro */
+            color: #ffff00; /* Texto amarillo */
+        }
+
+        .alto-contraste button {
+            background-color: #ffff00; /* Fondo amarillo para el botón */
+            color: #000000; /* Texto negro en el botón */
+            border: 2px solid #ffffff; /* Borde blanco visible */
+        }
+
+        .alto-contraste a {
+            color: #00ff00; /* Enlaces de color verde brillante */
+        }
+
+        /* Estilos para el modo en blanco y negro (escala de grises) */
+        .blanco-negro {
+            filter: grayscale(100%);
+        }
+
+        /* Botones de activación de estilos */
+        #toggle-contraste, #toggle-blanco-negro {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos predeterminados para el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff; /* Fondo blanco normal */
+            color: #000000; /* Texto negro predeterminado */
+        }
+
+        /* Estilos normales para botones */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        a {
+            color: #007bff; /* Enlaces en azul predeterminado */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Modos de Accesibilidad</h2>
+    
+    <!-- Botones para activar/desactivar los modos -->
+    <button id="toggle-contraste">Activar Modo Alto Contraste</button>
+    <button id="toggle-blanco-negro">Activar Modo Blanco y Negro</button>
+
+    <p>Este es un ejemplo de texto en la página. Puedes activar el modo de alto contraste o el modo blanco y negro (escala de grises) para ayudar a las personas con dificultades visuales.</p>
+
+    <a href="#">Este es un enlace de ejemplo</a>
+
+    <div>
+        <p>Elige entre los dos modos de accesibilidad disponibles: modo de alto contraste o modo de blanco y negro.</p>
+    </div>
+
+    <script>
+        // Obtener los botones y el cuerpo del documento
+        const toggleContraste = document.getElementById('toggle-contraste');
+        const toggleBlancoNegro = document.getElementById('toggle-blanco-negro');
+        const body = document.body;
+
+        // Estado de los modos
+        let altoContrasteActivo = false;
+        let blancoNegroActivo = false;
+
+        // Función para activar/desactivar el modo de alto contraste
+        toggleContraste.addEventListener('click', function() {
+            if (altoContrasteActivo) {
+                // Si el modo de alto contraste está activado, lo desactivamos
+                body.classList.remove('alto-contraste');
+                toggleContraste.textContent = 'Activar Modo Alto Contraste';
+            } else {
+                // Desactivamos el modo blanco y negro si está activo
+                if (blancoNegroActivo) {
+                    body.classList.remove('blanco-negro');
+                    toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
+                    blancoNegroActivo = false;
+                }
+                // Activamos el modo de alto contraste
+                body.classList.add('alto-contraste');
+                toggleContraste.textContent = 'Desactivar Modo Alto Contraste';
+            }
+            altoContrasteActivo = !altoContrasteActivo;
+        });
+
+        // Función para activar/desactivar el modo blanco y negro (escala de grises)
+        toggleBlancoNegro.addEventListener('click', function() {
+            if (blancoNegroActivo) {
+                // Si el modo blanco y negro está activado, lo desactivamos
+                body.classList.remove('blanco-negro');
+                toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
+            } else {
+                // Desactivamos el modo de alto contraste si está activo
+                if (altoContrasteActivo) {
+                    body.classList.remove('alto-contraste');
+                    toggleContraste.textContent = 'Activar Modo Alto Contraste';
+                    altoContrasteActivo = false;
+                }
+                // Activamos el modo blanco y negro
+                body.classList.add('blanco-negro');
+                toggleBlancoNegro.textContent = 'Desactivar Modo Blanco y Negro';
+            }
+            blancoNegroActivo = !blancoNegroActivo;
+        });
+    </script>
+
+</body>
+</html>
+
+<!--MODO VINTAGE-->
+
+<!--MODO DALTONICO-->
+
+<!--MODO DALTONICO-->
+
+
+<!--METER NUMERO INICIO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzca el radio deseado en km:</title>
+</head>
+<body>
+    <h2>Introduzca el radio deseado en km:</h2>
+    
+    <form action="#" method="post">
+        <label for="numero">Radio:</label>
+        <input type="number" id="numero" name="numero" min="1" max="2000" step="1" required>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
+
+<!--METER INICIO FINAL-->
+
+<!--MAPA MUY EPICO INICIO-->
 </header>
   <main>
   <h1 id="mapa-de-los-embalses">Mapa de los embalses</h1>
@@ -46,6 +213,122 @@
        allowfullscreen="">
   </iframe>
 </div>
+<!--MAPA MUY EPICO FINAL-->
+
+<!--EPICIDAD CONCENTRADA PASO 1-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interactivo de Embalses</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Selecciona un punto y un radio para filtrar los embalses</h2>
+
+<!-- Input para el radio -->
+<label for="radio">Radio en km:</label>
+<input type="number" id="radio" value="50" min="1" max="200">
+
+<div id="map"></div>
+
+<script>
+  let map;
+  let circle;
+  const embalses = [
+    { nombre: "Embalse 1", lat: 36.7213028, lng: -4.4216366 }, // Añade coordenadas reales
+    { nombre: "Embalse 2", lat: 36.7323028, lng: -4.4316366 },
+    // Añadir más embalses aquí...
+  ];
+  let markers = [];
+
+  function initMap() {
+    // Inicializar el mapa centrado en Málaga
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 36.7213028, lng: -4.4216366 },
+      zoom: 10
+    });
+
+    // Añadir marcadores de embalses al mapa
+    embalses.forEach(embalse => {
+      const marker = new google.maps.Marker({
+        position: { lat: embalse.lat, lng: embalse.lng },
+        map: map,
+        title: embalse.nombre
+      });
+      markers.push(marker);
+    });
+
+    // Evento de clic para definir el centro del círculo
+    map.addListener("click", function(event) {
+      const latLng = event.latLng;
+      dibujarCirculo(latLng);
+    });
+  }
+
+  function dibujarCirculo(latLng) {
+    const radio = document.getElementById("radio").value * 1000; // Convertir a metros
+
+    // Eliminar el círculo anterior
+    if (circle) {
+      circle.setMap(null);
+    }
+
+    // Dibujar el círculo
+    circle = new google.maps.Circle({
+      center: latLng,
+      radius: radio,
+      map: map,
+      fillColor: "#FF0000",
+      fillOpacity: 0.3,
+      strokeColor: "#FF0000",
+      strokeOpacity: 0.8,
+      strokeWeight: 2
+    });
+
+    // Filtrar y mostrar solo los embalses dentro del círculo
+    filtrarEmbalses(latLng, radio);
+  }
+
+  function filtrarEmbalses(centro, radio) {
+    const R = 6371e3; // Radio de la Tierra en metros
+
+    markers.forEach(marker => {
+      const distancia = google.maps.geometry.spherical.computeDistanceBetween(
+        new google.maps.LatLng(centro.lat(), centro.lng()), 
+        marker.getPosition()
+      );
+
+      // Mostrar solo los marcadores dentro del radio
+      if (distancia <= radio) {
+        marker.setMap(map);
+      } else {
+        marker.setMap(null);
+      }
+    });
+  }
+
+  window.onload = initMap;
+</script>
+
+</body>
+</html>
+
+<!--EPICIDAD CONCENTRADA FINAL-->
+
+
+
+
+
+
 
 </main>
   <footer>
