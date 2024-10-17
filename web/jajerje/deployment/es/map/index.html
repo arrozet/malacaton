@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es-es" dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de Embalses | DAJER</title>
+<meta name="generator" content="Hugo 0.136.1">
+
+
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css">
+
+  <meta property="og:title" content="DAJER">
+  <meta property="og:description" content="A sustainable approach to water management ">
+  <meta property="og:image" content="https://jajerje.fun/favicon.ico">
+  <meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:type" content="website">
+  
+</head>
+
+<body>
+  <header>
+    <img class="icon" src="/assets/logo.png" alt="DAJER logo">
+<h1>DAJER</h1>
+<p>A sustainable approach to water management</p>
+<nav>
+  
+  <ul>
+    <li><a href="/es" title="">Inicio</a></li><li><a href="/es/reservoir" title="">Embalses</a></li><li><a href="/es/map" title="">Mapa interactivo</a></li><li><a href="/es/analysis" title="">Análisis</a></li><li><a href="/es/contact" title="">Contacto</a></li><li><a href="/es/whoarewe" title="">¿Quiénes somos?</a></li>
+  </ul>
+</nav>
+
+<!--MODO VINTAGE-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modos de Accesibilidad</title>
+    <style>
+        /* Estilos para el modo de alto contraste */
+        .alto-contraste {
+            background-color: #000000; /* Fondo negro */
+            color: #ffff00; /* Texto amarillo */
+        }
+
+        .alto-contraste button {
+            background-color: #ffff00; /* Fondo amarillo para el botón */
+            color: #000000; /* Texto negro en el botón */
+            border: 2px solid #ffffff; /* Borde blanco visible */
+        }
+
+        .alto-contraste a {
+            color: #00ff00; /* Enlaces de color verde brillante */
+        }
+
+        /* Estilos para el modo en blanco y negro (escala de grises) */
+        .blanco-negro {
+            filter: grayscale(100%);
+        }
+
+        /* Estilos para el modo de texto morado */
+        .texto-morado {
+            color: #800080; /* Color morado para todo el texto */
+        }
+
+        /* Botones de activación de estilos */
+        #toggle-contraste, #toggle-blanco-negro, #toggle-texto-morado {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos predeterminados para el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff; /* Fondo blanco normal */
+            color: #000000; /* Texto negro predeterminado */
+        }
+
+        /* Estilos normales para botones */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        a {
+            color: #007bff; /* Enlaces en azul predeterminado */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Modos de Accesibilidad</h2>
+    
+    <!-- Botones para activar/desactivar los modos -->
+    <button id="toggle-contraste">Activar Modo Alto Contraste</button>
+    <button id="toggle-blanco-negro">Activar Modo Vintage</button>
+    <button id="toggle-texto-morado">Activar Modo Feminista</button>
+
+    <p>Conocemos los problemas que pueden tener ciertas personas al navegar por nuestra web y nos sentimos comprometidos con ello. Por ello hemos decidido crear varios modos de accesibilidad para ayudarles.</p>
+
+    <a href="#">Este es un enlace de ejemplo</a>
+
+    <div>
+        <p>Elige entre los modos de accesibilidad disponibles: modo de alto contraste, modo de vintage o modo de feminista.</p>
+    </div>
+
+    <script>
+        // Obtener los botones y el cuerpo del documento
+        const toggleContraste = document.getElementById('toggle-contraste');
+        const toggleBlancoNegro = document.getElementById('toggle-blanco-negro');
+        const toggleTextoMorado = document.getElementById('toggle-texto-morado');
+        const body = document.body;
+
+        // Estado de los modos
+        let altoContrasteActivo = false;
+        let blancoNegroActivo = false;
+        let textoMoradoActivo = false;
+
+        // Función para activar/desactivar el modo de alto contraste
+        toggleContraste.addEventListener('click', function() {
+            if (altoContrasteActivo) {
+                body.classList.remove('alto-contraste');
+                toggleContraste.textContent = 'Activar Modo Alto Contraste';
+            } else {
+                desactivarOtrosModos();
+                body.classList.add('alto-contraste');
+                toggleContraste.textContent = 'Desactivar Modo Alto Contraste';
+            }
+            altoContrasteActivo = !altoContrasteActivo;
+        });
+
+        // Función para activar/desactivar el modo blanco y negro
+        toggleBlancoNegro.addEventListener('click', function() {
+            if (blancoNegroActivo) {
+                body.classList.remove('blanco-negro');
+                toggleBlancoNegro.textContent = 'Activar Modo Vintage';
+            } else {
+                desactivarOtrosModos();
+                body.classList.add('blanco-negro');
+                toggleBlancoNegro.textContent = 'Desactivar Modo Vintage';
+            }
+            blancoNegroActivo = !blancoNegroActivo;
+        });
+
+        // Función para activar/desactivar el modo de texto morado
+        toggleTextoMorado.addEventListener('click', function() {
+            if (textoMoradoActivo) {
+                body.classList.remove('texto-morado');
+                toggleTextoMorado.textContent = 'Activar Modo Feminista';
+            } else {
+                desactivarOtrosModos();
+                body.classList.add('texto-morado');
+                toggleTextoMorado.textContent = 'Desactivar Modo Feminista';
+            }
+            textoMoradoActivo = !textoMoradoActivo;
+        });
+
+        // Función para desactivar otros modos activos
+        function desactivarOtrosModos() {
+            if (altoContrasteActivo) {
+                body.classList.remove('alto-contraste');
+                toggleContraste.textContent = 'Activar Modo Alto Contraste';
+                altoContrasteActivo = false;
+            }
+            if (blancoNegroActivo) {
+                body.classList.remove('blanco-negro');
+                toggleBlancoNegro.textContent = 'Activar Modo Blanco y Negro';
+                blancoNegroActivo = false;
+            }
+            if (textoMoradoActivo) {
+                body.classList.remove('texto-morado');
+                toggleTextoMorado.textContent = 'Activar Modo Texto Morado';
+                textoMoradoActivo = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+<!--MODO VINTAGE-->
+
+<!--MODO DALTONICO-->
+
+<!--MODO DALTONICO-->
+
+
+
+
+
+
+<!--ESPERATE QUE LA VOY A LIAR-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo de Embalses con API</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        #info {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mapa Interactivo de Embalses</h2>
+    <p>Haga clic en el mapa para seleccionar un punto. Luego, introduzca el radio (en kilómetros) para mostrar los embalses dentro de ese radio.</p>
+
+    <label for="radio">Radio (km):</label>
+    <input type="number" id="radio" value="50" min="1" max="500">
+    <button id="buscar">Buscar Embalses</button>
+    <button id="ubicacion">Usar mi ubicación</button>
+
+    <div id="map"></div>
+    <div id="info"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Inicializar el mapa centrado en España
+        var map = L.map('map').setView([40.416775, -3.703790], 6); // Coordenadas de Madrid
+
+        // Añadir una capa base de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Añadir marcador en el lugar donde el usuario haga clic
+        var marcador = null;
+        var circulo = null;
+        var embalses = []; // Aquí se almacenarán los embalses obtenidos de la API
+        var marcadoresEmbalses = [];
+
+        // Cargar embalses desde la API
+        async function cargarEmbalses() {
+            try {
+                let response = await fetch("https://g4feb4b88427ce8-malackaton.adb.eu-marseille-1.oraclecloudapps.com/ords/admin/vista_embalses/?limit=10000");
+                let data = await response.json();
+                embalses = data.items.map(item => ({
+                    nombre: item.nombre,
+                    lat: parseFloat(item.x),
+                    lng: parseFloat(item.y)
+                }));
+                console.log("Embalses cargados desde la API:", embalses);
+            } catch (error) {
+                console.error("Error al cargar los embalses:", error);
+            }
+        }
+
+        // Llamar a la función para cargar los embalses desde la API
+        cargarEmbalses();
+
+        // Evento de clic para seleccionar el punto en el mapa
+        map.on('click', function(e) {
+            if (marcador) {
+                map.removeLayer(marcador);
+            }
+            if (circulo) {
+                map.removeLayer(circulo);
+            }
+            marcador = L.marker(e.latlng).addTo(map);
+            document.getElementById('info').innerHTML = `Punto seleccionado: Latitud: ${e.latlng.lat}, Longitud: ${e.latlng.lng}`;
+        });
+
+        // Función para calcular la distancia entre dos puntos (en kilómetros)
+        function calcularDistancia(lat1, lng1, lat2, lng2) {
+            var R = 6371; // Radio de la Tierra en km
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLng = (lng2 - lng1) * Math.PI / 180;
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                    Math.sin(dLng/2) * Math.sin(dLng/2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c; // Distancia en km
+        }
+
+        // Función para mostrar los embalses dentro del radio y dibujar el círculo
+        function mostrarEmbalsesDentroDelRadio(latLng, radio) {
+            // Eliminar marcadores anteriores de embalses
+            marcadoresEmbalses.forEach(function(marker) {
+                map.removeLayer(marker);
+            });
+            marcadoresEmbalses = [];
+
+            // Eliminar el círculo anterior si existe
+            if (circulo) {
+                map.removeLayer(circulo);
+            }
+
+            // Dibujar el círculo en el mapa
+            circulo = L.circle(latLng, {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.2,
+                radius: radio * 1000 // Convertir km a metros
+            }).addTo(map);
+
+            var embalsesDentroDelRadio = embalses.filter(function(embalse) {
+                var distancia = calcularDistancia(latLng.lat, latLng.lng, embalse.lat, embalse.lng);
+                return distancia <= radio;
+            });
+
+            // Limpiar resultados previos
+            document.getElementById('info').innerHTML = "<h3>Embalses dentro del radio:</h3>";
+
+            // Mostrar los embalses encontrados y añadir marcadores en el mapa
+            if (embalsesDentroDelRadio.length === 0) {
+                document.getElementById('info').innerHTML += "<p>No se encontraron embalses dentro del radio seleccionado.</p>";
+            } else {
+                embalsesDentroDelRadio.forEach(function(embalse) {
+                    document.getElementById('info').innerHTML += `<p>${embalse.nombre} - Latitud: ${embalse.lat}, Longitud: ${embalse.lng}</p>`;
+                    
+                    // Añadir marcadores de embalses al mapa
+                    var marker = L.marker([embalse.lat, embalse.lng]).addTo(map);
+                    marker.bindTooltip(embalse.nombre); // Mostrar nombre al pasar el ratón
+                    marcadoresEmbalses.push(marker);
+                });
+            }
+        }
+
+        // Evento para buscar los embalses dentro del radio
+        document.getElementById('buscar').addEventListener('click', function() {
+            if (!marcador) {
+                alert("Seleccione un punto en el mapa.");
+                return;
+            }
+
+            var radio = parseFloat(document.getElementById('radio').value);
+            var latLng = marcador.getLatLng();
+
+            mostrarEmbalsesDentroDelRadio(latLng, radio);
+        });
+
+        // Función para obtener la ubicación actual del usuario
+        document.getElementById('ubicacion').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+
+                    if (marcador) {
+                        map.removeLayer(marcador);
+                    }
+                    if (circulo) {
+                        map.removeLayer(circulo);
+                    }
+
+                    // Añadir un marcador y centrar el mapa en la ubicación actual del usuario
+                    marcador = L.marker([lat, lng]).addTo(map);
+                    map.setView([lat, lng], 10); // Ajusta el nivel de zoom a 10
+                    document.getElementById('info').innerHTML = `Ubicación actual: Latitud: ${lat}, Longitud: ${lng}`;
+                }, function(error) {
+                    alert("Error al obtener la ubicación.");
+                });
+            } else {
+                alert("Geolocalización no soportada por este navegador.");
+            }
+        });
+
+    </script>
+
+</body>
+</html>
+<!--LA HE LIADO-->
+
+
+
+</main>
+  <footer>
+    <p> ® JAJERJE studios</p>
+<p>
+  Forked with <span style="color: #e25555;">&#9829;</span> from
+  <a href="https://openbokeron.uma.es/gitea/OpenBokeron/Web">OpenBokeron</a>
+</p>
+
+<p>
+  
+  <a href="/es/">Español</a>
+  
+</p>
+</footer>
+</body>
+
+</html>
