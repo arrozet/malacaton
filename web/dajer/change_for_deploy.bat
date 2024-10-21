@@ -2,8 +2,9 @@
 setlocal
 
 :: Definir la cadena a buscar y la cadena de reemplazo
-set "FIND=http://localhost:1313"
-set "REPLACE=https://jajerje.fun/"
+set "FIND=https://dajer.netlify.app//"
+set "REPLACE=https://dajer.netlify.app"
+
 
 :: Buscar y reemplazar en los archivos html, txt, css, js, xml dentro de la carpeta actual y subcarpetas
 for /r %%f in (*.html *.txt *.css *.js *.xml) do (
