@@ -1,129 +1,26 @@
 <!DOCTYPE html>
 <html lang="es-es" dir="ltr">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mapa de Embalses | DAJER</title>
-<meta name="generator" content="Hugo 0.136.1">
+<head>
+    <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Embalses | DAJER</title>
+    <meta name="generator" content="Hugo 0.136.1">
 
-
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
-  <meta property="og:title" content="DAJER">
-  <meta property="og:description" content="A sustainable approach to water management ">
-  <meta property="og:image" content="https://dajer.netlify.appfavicon.ico">
-  <meta property="og:url" content="http://jajerje.fun/">
-  <meta property="og:type" content="website">
-  
-</head>
+    <meta property="og:title" content="DAJER">
+    <meta property="og:description" content="Un enfoque sostenible para la gestión del agua">
+    <meta property="og:image" content="https://dajer.netlify.app/favicon.ico">
+    <meta property="og:url" content="https://dajer.netlify.app">
+    <meta property="og:type" content="website">
 
-<body>
-  <header>
-    <img class="icon" src="/assets/logo.png" alt="DAJER logo">
-<h1>DAJER</h1>
-<p>A sustainable approach to water management</p>
-<nav>
-  
-  <ul>
-    <li><a href="/es" title="">Inicio</a></li><li><a href="/es/map" title="">Mapa interactivo</a></li><li><a href="/es/contact" title="">Contacto</a></li><li><a href="/es/whoarewe" title="">¿Quiénes somos?</a></li>
-  </ul>
-</nav>
-
-<!--CAMBIAR TAMAÑO DE LETRA-->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambiar tamaño de fuente</title>
     <style>
-        body {
-            font-size: 16px; /* Tamaño base de la fuente */
-        }
-        .controls {
-            margin-top: 20px;
-        }
-        .controls button {
-            margin-right: 10px;
-        }
-    </style>
-</head>
-<body>
-
-    <h2>Control de Tamaño de Fuente</h2>
-    <p>Utilice los botones para cambiar el tamaño de la fuente en toda la página.</p>
-
-    <!-- Botones para cambiar el tamaño de la fuente -->
-    <div class="controls">
-        <button id="aumentarFuente">Aumentar fuente</button>
-        <button id="disminuirFuente">Disminuir fuente</button>
-        <button id="restablecerFuente">Restablecer fuente</button>
-    </div>
-
-    <p>Intenta ajustar el tamaño para ver cómo cambia la fuente de toda la página.</p>
-
-    <script>
-        // Tamaño de fuente base
-        let fontSize = 16;
-        const fontSizeMax = 40; // Tamaño máximo de fuente
-        const fontSizeMin = 5;  // Tamaño mínimo de fuente
-        const incremento = 5;   // Incremento o decremento rápido
-
-        // Función para cambiar el tamaño de la fuente
-        function cambiarTamanoFuente(cambio) {
-            fontSize += cambio;
-
-            // Limitar el tamaño de la fuente entre 5 y 40 píxeles
-            if (fontSize > fontSizeMax) {
-                fontSize = fontSizeMax;
-            } else if (fontSize < fontSizeMin) {
-                fontSize = fontSizeMin;
-            }
-
-            document.body.style.fontSize = fontSize + 'px';
-        }
-
-        // Restablecer el tamaño de fuente al valor base
-        function restablecerTamanoFuente() {
-            fontSize = 16;
-            document.body.style.fontSize = fontSize + 'px';
-        }
-
-        // Evento para aumentar el tamaño de la fuente
-        document.getElementById('aumentarFuente').addEventListener('click', function() {
-            cambiarTamanoFuente(incremento); // Aumenta el tamaño de la fuente en 5px
-        });
-
-        // Evento para disminuir el tamaño de la fuente
-        document.getElementById('disminuirFuente').addEventListener('click', function() {
-            cambiarTamanoFuente(-incremento); // Disminuye el tamaño de la fuente en 5px
-        });
-
-        // Evento para restablecer el tamaño de la fuente al valor base
-        document.getElementById('restablecerFuente').addEventListener('click', function() {
-            restablecerTamanoFuente(); // Restablece el tamaño de la fuente a 16px
-        });
-    </script>
-
-</body>
-</html>
-
-<!--CAMBIAR TAMAÑO LETRA FIN-->
-
-<!--MODO VINTAGE-->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modos de Accesibilidad</title>
-    <style>
-        /* Estilos para el modo de alto contraste */
+        /* Estilos para los modos de accesibilidad */
         .alto-contraste {
             background-color: #000000; /* Fondo negro */
             color: #ffff00; /* Texto amarillo */
@@ -139,12 +36,10 @@
             color: #00ff00; /* Enlaces de color verde brillante */
         }
 
-        /* Estilos para el modo en blanco y negro (escala de grises) */
         .blanco-negro {
-            filter: grayscale(100%);
+            filter: grayscale(100%); /* Escala de grises */
         }
 
-        /* Estilos para el modo de alto contraste claro */
         .contraste-claro {
             background-color: #ffffff; /* Fondo blanco */
             color: #000000; /* Texto negro */
@@ -160,245 +55,72 @@
             color: #ff0000; /* Enlaces de color rojo */
         }
 
-        /* Botones de activación de estilos */
-        #toggle-contraste, #toggle-blanco-negro, #toggle-contraste-claro {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        /* Estilos predeterminados para el cuerpo */
-        
-        /*
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;*/
-            /*background-color: #ffffff; Fondo blanco normal */
-            /*color: #A9A9A9; Texto gris claro predeterminado */
-        /*}*/
-
-        /* Estilos normales para botones */
-        /*button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }*/
-
-        /*a {
-            color: #007bff; *//* Enlaces en azul predeterminado */
-        /*}*/
-
-    </style>
-</head>
-<body>
-
-    <h2>Modos de Accesibilidad</h2>
-    
-    <!-- Botones para activar/desactivar los modos -->
-    <button id="toggle-contraste">Activar Modo Alto Contraste</button>
-    <button id="toggle-blanco-negro">Activar Modo Vintage</button>
-    <button id="toggle-contraste-claro">Activar Modo Alto Contraste Claro</button>
-
-    <p>Conocemos los problemas que pueden tener ciertas personas al navegar por nuestra web y nos sentimos comprometidos con ello. Por ello hemos decidido crear varios modos de accesibilidad para ayudarles.</p>
-
-    <script>
-        // Obtener los botones y el cuerpo del documento
-        const toggleContraste = document.getElementById('toggle-contraste');
-        const toggleBlancoNegro = document.getElementById('toggle-blanco-negro');
-        const toggleContrasteClaro = document.getElementById('toggle-contraste-claro');
-        const body = document.body;
-
-        // Estado de los modos
-        let altoContrasteActivo = false;
-        let blancoNegroActivo = false;
-        let contrasteClaroActivo = false;
-
-        // Función para activar/desactivar el modo de alto contraste
-        toggleContraste.addEventListener('click', function() {
-            if (altoContrasteActivo) {
-                body.classList.remove('alto-contraste');
-                toggleContraste.textContent = 'Activar Modo Alto Contraste';
-            } else {
-                desactivarOtrosModos();
-                body.classList.add('alto-contraste');
-                toggleContraste.textContent = 'Desactivar Modo Alto Contraste';
-            }
-            altoContrasteActivo = !altoContrasteActivo;
-        });
-
-        // Función para activar/desactivar el modo blanco y negro
-        toggleBlancoNegro.addEventListener('click', function() {
-            if (blancoNegroActivo) {
-                body.classList.remove('blanco-negro');
-                toggleBlancoNegro.textContent = 'Activar Modo Vintage';
-            } else {
-                desactivarOtrosModos();
-                body.classList.add('blanco-negro');
-                toggleBlancoNegro.textContent = 'Desactivar Modo Vintage';
-            }
-            blancoNegroActivo = !blancoNegroActivo;
-        });
-
-        // Función para activar/desactivar el modo de alto contraste claro
-        toggleContrasteClaro.addEventListener('click', function() {
-            if (contrasteClaroActivo) {
-                body.classList.remove('contraste-claro');
-                toggleContrasteClaro.textContent = 'Activar Modo Alto Contraste Claro';
-            } else {
-                desactivarOtrosModos();
-                body.classList.add('contraste-claro');
-                toggleContrasteClaro.textContent = 'Desactivar Modo Alto Contraste Claro';
-            }
-            contrasteClaroActivo = !contrasteClaroActivo;
-        });
-
-        // Función para desactivar otros modos activos
-        function desactivarOtrosModos() {
-            if (altoContrasteActivo) {
-                body.classList.remove('alto-contraste');
-                toggleContraste.textContent = 'Activar Modo Alto Contraste';
-                altoContrasteActivo = false;
-            }
-            if (blancoNegroActivo) {
-                body.classList.remove('blanco-negro');
-                toggleBlancoNegro.textContent = 'Activar Modo Vintage';
-                blancoNegroActivo = false;
-            }
-            if (contrasteClaroActivo) {
-                body.classList.remove('contraste-claro');
-                toggleContrasteClaro.textContent = 'Activar Modo Alto Contraste Claro';
-                contrasteClaroActivo = false;
-            }
-        }
-    </script>
-
-</body>
-</html>
-
-
-<!--MODO VINTAGE FIN-->
-
-<!--LEIDA EN VOZ ALTA-->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lectura en Voz Alta</title>
-    <style>
-        /* Botones para la lectura en voz alta */
-        #read-aloud, #stop-reading {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-
-        #stop-reading {
-            background-color: #dc3545; /* Botón de detener en rojo */
-        }
-    </style>
-</head>
-<body>
-
-    <h2>Lectura en Voz Alta</h2>
-    
-    <p>Este texto será leído en voz alta cuando pulses el botón. Puedes detener la lectura en cualquier momento usando el botón de "Detener".</p>
-
-    <!-- Botones para leer y detener la lectura -->
-    <button id="read-aloud">Leer en Voz Alta</button>
-    <button id="stop-reading">Detener</button>
-
-    <script>
-        // Crear una instancia de SpeechSynthesisUtterance para la lectura en voz alta
-        const speech = new SpeechSynthesisUtterance();
-        speech.text = document.body.innerText; // Lee todo el texto del cuerpo de la página
-
-        // Configuraciones opcionales de la voz (idioma predeterminado del navegador)
-        speech.lang = 'es-ES'; // Cambia según el idioma si es necesario
-        speech.rate = 1; // Velocidad normal
-        speech.pitch = 1; // Tono normal
-
-        // Función para leer el contenido de la página en voz alta
-        document.getElementById('read-aloud').addEventListener('click', function() {
-            window.speechSynthesis.speak(speech);
-        });
-
-        // Función para detener la lectura en voz alta
-        document.getElementById('stop-reading').addEventListener('click', function() {
-            window.speechSynthesis.cancel(); // Detiene cualquier síntesis de voz en curso
-        });
-    </script>
-
-</body>
-</html>
-
-<!--LEIDA EN VOZ ALTA FINAL-->
-
-
-
-
-
-
-<!--ESPERATE QUE LA VOY A LIAR-->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interactivo de Embalses con API</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <style>
         #map {
             height: 500px;
             width: 100%;
         }
+
         #info {
             margin: 20px 0;
         }
+
         .embalse-info {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             padding: 10px;
             margin-bottom: 10px;
         }
+
         .embalse-info h4 {
             margin-top: 0;
             color: #007bff;
         }
+
         .embalse-info a {
             color: #0056b3;
             text-decoration: none;
         }
+
         .embalse-info a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <img class="icon" src="/assets/logo.png" alt="DAJER logo">
+        <h1>DAJER</h1>
+        <p>Un enfoque sostenible para la gestión del agua</p>
+        <nav>
+            <ul>
+                <li><a href="/es" title="">Inicio</a></li>
+                <li><a href="/es/map" title="">Mapa interactivo</a></li>
+                <li><a href="/es/accessibility" title="">Accesibilidad</a></li>
+                <li><a href="/es/contact" title="">Contacto</a></li>
+                <li><a href="/es/whoarewe" title="">¿Quiénes somos?</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>Mapa Interactivo de Embalses</h2>
-    <p>Haga clic en el mapa para seleccionar un punto. Luego, introduzca el radio (en kilómetros) para mostrar los embalses dentro de ese radio.</p>
+    <main>
+        <h2>Mapa interactivo de embalses</h2>
+        <p>Haga clic en el mapa para seleccionar un punto. Luego, introduzca el radio (en kilómetros) para mostrar los embalses dentro de ese radio.</p>
 
-    <label for="radio">Radio (km):</label>
-    <input type="number" id="radio" value="50" min="1" max="500">
-    <button id="buscar">Buscar Embalses</button>
-    <button id="ubicacion">Usar mi ubicación</button>
+        <label for="radio">Radio (km):</label>
+        <input type="number" id="radio" value="50" min="1" max="500">
+        <button id="buscar">Buscar Embalses</button>
+        <button id="ubicacion">Usar mi ubicación</button>
 
-    <div id="map"></div>
-    <div id="info"></div>
+        <div id="map"></div>
+        <div id="info"></div>
+    </main>
+
+    <footer>
+        <p> ® DAJER</p>
+        <p>Forked with <span style="color: #e25555;">&#9829;</span> from <a href="https://openbokeron.uma.es/gitea/OpenBokeron/Web">OpenBokeron</a></p>
+        <p><a href="/es/">Español</a></p>
+    </footer>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
@@ -462,10 +184,10 @@
             var R = 6371; // Radio de la Tierra en km
             var dLat = (lat2 - lat1) * Math.PI / 180;
             var dLng = (lng2 - lng1) * Math.PI / 180;
-            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                    Math.sin(dLng/2) * Math.sin(dLng/2);
-            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLng / 2) * Math.sin(dLng / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             return R * c; // Distancia en km
         }
 
@@ -514,7 +236,7 @@
                         ${embalse.alt_cimien ? `<p><strong>Altura Cimientos:</strong> ${embalse.alt_cimien} m</p>` : ""}
                         ${embalse.informe ? `<p><a href="${embalse.informe}" target="_blank">Informe Detallado</a></p>` : ""}
                     </div>`;
-                    
+
                     // Añadir marcadores de embalses al mapa
                     var marker = L.marker([embalse.lat, embalse.lng]).addTo(map);
                     marker.bindTooltip(embalse.nombre); // Mostrar nombre al pasar el ratón
@@ -614,29 +336,27 @@
             }
         });
 
+        // Aplicar estilos desde el almacenamiento local
+        document.body.style.fontSize = localStorage.getItem('fontSize') + 'px' || '16px';
+
+        // Modos de Accesibilidad
+        altoContrasteActivo = localStorage.getItem('altoContraste') === 'true';
+        blancoNegroActivo = localStorage.getItem('blancoNegro') === 'true';
+        contrasteClaroActivo = localStorage.getItem('contrasteClaro') === 'true';
+
+        // Aplicar estilos según el almacenamiento local
+        if (altoContrasteActivo) {
+            document.body.classList.add('alto-contraste');
+        }
+
+        if (blancoNegroActivo) {
+            document.body.classList.add('blanco-negro');
+        }
+
+        if (contrasteClaroActivo) {
+            document.body.classList.add('contraste-claro');
+        }
     </script>
-
-</body>
-</html>
-
-<!--LA HE LIADO-->
-
-
-
 </main>
-  <footer>
-    <p> ® DAJER</p>
-<p>
-  Forked with <span style="color: #e25555;">&#9829;</span> from
-  <a href="https://openbokeron.uma.es/gitea/OpenBokeron/Web">OpenBokeron</a>
-</p>
-
-<p>
-  
-  <a href="/es/">Español</a>
-  
-</p>
-</footer>
 </body>
-
 </html>

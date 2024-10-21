@@ -2,7 +2,7 @@
 setlocal
 
 :: Definir la cadena a buscar y la cadena de reemplazo
-set "FIND=https://dajer.netlify.app//"
+set "FIND=http://jajerje.fun/"
 set "REPLACE=https://dajer.netlify.app"
 
 

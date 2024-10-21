@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es-es" dir="ltr">
+<head>
+    <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad | DAJER</title>
+    <meta name="generator" content="Hugo 0.136.1">
+
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <meta property="og:title" content="DAJER">
+    <meta property="og:description" content="Un enfoque sostenible para la gestión del agua">
+    <meta property="og:image" content="https://dajer.netlify.app/favicon.ico">
+    <meta property="og:url" content="https://dajer.netlify.app">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* Estilos para los modos de accesibilidad */
+        .alto-contraste {
+            background-color: #000000; /* Fondo negro */
+            color: #ffff00; /* Texto amarillo */
+        }
+
+        .alto-contraste button {
+            background-color: #ffff00; /* Fondo amarillo para el botón */
+            color: #000000; /* Texto negro en el botón */
+        }
+
+        .alto-contraste a {
+            color: #00ff00; /* Enlaces de color verde brillante */
+        }
+
+        .blanco-negro {
+            filter: grayscale(100%); /* Escala de grises */
+        }
+
+        .contraste-claro {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #000000; /* Texto negro */
+        }
+
+        /* Estilo para los botones */
+        .controls, .buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .controls button, .buttons button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        /* Estilos para los botones de control de tamaño de fuente */
+        #aumentarFuente {
+            background-color: #28a745; /* Verde para aumentar */
+            color: white;
+        }
+
+        #disminuirFuente {
+            background-color: #dc3545; /* Rojo para disminuir */
+            color: white;
+        }
+
+        /* Estilo para la lectura en voz alta */
+        #read-aloud, #stop-reading {
+            padding: 10px 20px;
+            background-color: #007bff; /* Azul para lectura en voz alta */
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #stop-reading {
+            color: rgb(255, 255, 255);
+            background-color: #dc3545; /* Botón de detener en rojo */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="icon" src="/assets/logo.png" alt="DAJER logo">
+        <h1>DAJER</h1>
+        <p>Un enfoque sostenible para la gestión del agua</p>
+        <nav>
+            <ul>
+                <li><a href="/es" title="">Inicio</a></li>
+                <li><a href="/es/map" title="">Mapa interactivo</a></li>
+                <li><a href="/es/accessibility" title="">Accesibilidad</a></li>
+                <li><a href="/es/contact" title="">Contacto</a></li>
+                <li><a href="/es/whoarewe" title="">¿Quiénes somos?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Control de tamaño de fuente</h2>
+            <p>Utilice los botones para cambiar el tamaño de la fuente en toda la página.</p>
+            <div class="controls">
+                <button id="aumentarFuente">Aumentar fuente</button>
+                <button id="disminuirFuente">Disminuir fuente</button>
+                <button id="restablecerFuente">Restablecer fuente</button>
+            </div>
+            <p>Intenta ajustar el tamaño para ver cómo cambia la fuente de toda la página.</p>
+        </section>
+
+        <section class="section">
+            <h2>Modos de accesibilidad</h2>
+            <div class="buttons">
+                <button id="toggle-contraste">Activar Modo Alto Contraste</button>
+                <button id="toggle-blanco-negro">Activar Modo Vintage</button>
+                <button id="toggle-contraste-claro">Activar Modo Alto Contraste Claro</button>
+            </div>
+            <p>Conocemos los problemas que pueden tener ciertas personas al navegar por nuestra web y nos sentimos comprometidos con ello. Por ello hemos decidido crear varios modos de accesibilidad para ayudarles.</p>
+        </section>
+
+        <section class="section">
+            <h2>Lectura en voz alta</h2>
+            <p>Este texto será leído en voz alta cuando pulses el botón. Puedes detener la lectura en cualquier momento usando el botón de "Detener".</p>
+            <div class="buttons">
+                <button id="read-aloud">Leer en Voz Alta</button>
+                <button id="stop-reading">Detener</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> ® DAJER</p>
+        <p>Forked with <span style="color: #e25555;">&#9829;</span> from
+            <a href="https://openbokeron.uma.es/gitea/OpenBokeron/Web">OpenBokeron</a>
+        </p>
+        <p><a href="/es/">Español</a></p>
+    </footer>
+
+    <script>
+        // Control de Tamaño de Fuente
+        let fontSize = parseInt(localStorage.getItem('fontSize')) || 16;
+        const fontSizeMax = 40;
+        const fontSizeMin = 5;
+        const incremento = 5;
+
+        document.body.style.fontSize = fontSize + 'px';
+
+        function cambiarTamanoFuente(cambio) {
+            fontSize += cambio;
+            if (fontSize > fontSizeMax) {
+                fontSize = fontSizeMax;
+            } else if (fontSize < fontSizeMin) {
+                fontSize = fontSizeMin;
+            }
+            document.body.style.fontSize = fontSize + 'px';
+            localStorage.setItem('fontSize', fontSize); // Guardar tamaño en localStorage
+        }
+
+        function restablecerTamanoFuente() {
+            fontSize = 16;
+            document.body.style.fontSize = fontSize + 'px';
+            localStorage.setItem('fontSize', fontSize); // Guardar tamaño en localStorage
+        }
+
+        document.getElementById('aumentarFuente').addEventListener('click', function() {
+            cambiarTamanoFuente(incremento);
+        });
+        document.getElementById('disminuirFuente').addEventListener('click', function() {
+            cambiarTamanoFuente(-incremento);
+        });
+        document.getElementById('restablecerFuente').addEventListener('click', function() {
+            restablecerTamanoFuente();
+        });
+
+        // Modos de Accesibilidad
+        const body = document.body;
+        let altoContrasteActivo = localStorage.getItem('altoContraste') === 'true';
+        let blancoNegroActivo = localStorage.getItem('blancoNegro') === 'true';
+        let contrasteClaroActivo = localStorage.getItem('contrasteClaro') === 'true';
+
+        // Aplicar estilos según el almacenamiento local
+        if (altoContrasteActivo) {
+            body.classList.add('alto-contraste');
+        }
+
+        if (blancoNegroActivo) {
+            body.classList.add('blanco-negro');
+        }
+
+        if (contrasteClaroActivo) {
+            body.classList.add('contraste-claro');
+        }
+
+        document.getElementById('toggle-contraste').addEventListener('click', function() {
+            altoContrasteActivo = !altoContrasteActivo;
+            if (altoContrasteActivo) {
+                body.classList.add('alto-contraste');
+                this.textContent = 'Desactivar Modo Alto Contraste';
+            } else {
+                body.classList.remove('alto-contraste');
+                this.textContent = 'Activar Modo Alto Contraste';
+            }
+            localStorage.setItem('altoContraste', altoContrasteActivo); // Guardar estado en localStorage
+        });
+
+        document.getElementById('toggle-blanco-negro').addEventListener('click', function() {
+            blancoNegroActivo = !blancoNegroActivo;
+            if (blancoNegroActivo) {
+                body.classList.add('blanco-negro');
+                this.textContent = 'Desactivar Modo Vintage';
+            } else {
+                body.classList.remove('blanco-negro');
+                this.textContent = 'Activar Modo Vintage';
+            }
+            localStorage.setItem('blancoNegro', blancoNegroActivo); // Guardar estado en localStorage
+        });
+
+        document.getElementById('toggle-contraste-claro').addEventListener('click', function() {
+            contrasteClaroActivo = !contrasteClaroActivo;
+            if (contrasteClaroActivo) {
+                body.classList.add('contraste-claro');
+                this.textContent = 'Desactivar Modo Alto Contraste Claro';
+            } else {
+                body.classList.remove('contraste-claro');
+                this.textContent = 'Activar Modo Alto Contraste Claro';
+            }
+            localStorage.setItem('contrasteClaro', contrasteClaroActivo); // Guardar estado en localStorage
+        });
+
+        // Lectura en voz alta
+        const speech = new SpeechSynthesisUtterance();
+        speech.lang = 'es-ES'; // Cambia según el idioma si es necesario
+        speech.rate = 1; // Velocidad normal
+        speech.pitch = 1; // Tono normal
+
+        document.getElementById('read-aloud').addEventListener('click', function() {
+            speech.text = document.body.innerText; // Lee todo el texto del cuerpo de la página
+            window.speechSynthesis.speak(speech);
+        });
+
+        document.getElementById('stop-reading').addEventListener('click', function() {
+            window.speechSynthesis.cancel(); // Detiene cualquier síntesis de voz en curso
+        });
+    </script>
+</body>
+</html>
