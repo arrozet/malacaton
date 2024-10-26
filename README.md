@@ -1,4 +1,8 @@
 # Water Management System - DAJER (Hackathon Project)
+<p align="center">
+    <img src="https://github.com/arrozet/malacaton/blob/main/resources/logo_grupo_hackaton-no-bg.png" alt="logo" width="400"/>
+</p>
+
 
 A web application developed for the Malackathon 2024 hackathon, aimed at visualizing and managing water reservoir data to support sustainable water management solutions.
 
