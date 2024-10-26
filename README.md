@@ -2,11 +2,6 @@
 
 A web application developed for the Malackathon 2024 hackathon, aimed at visualizing and managing water reservoir data to support sustainable water management solutions.
 
-## Overview
-The project was developed as part of the Malackathon 2024, an event organized by the School of Computer Science at the University of Málaga to address the challenges related to water sustainability (aligned with the United Nations' Sustainable Development Goal 6). The goal was to create a system that accesses a database hosted on Oracle Cloud Infrastructure (OCI) to retrieve information about water reservoirs and visualize it through an interactive map.
-
-Our team had approximately 8 hours to develop the solution, excluding breaks for meals and the final presentation. Despite the time constraints, we successfully implemented most of the challenge phases, except for phase 3, which was not completed due to a lack of additional data available online.
-
 ## Table of Contents
 1. [Overview](#overview)
 2. [Challenge Requirements](#challenge-requirements)
@@ -21,6 +16,11 @@ Our team had approximately 8 hours to develop the solution, excluding breaks for
 5. [Website and More](#website-and-more)
    - [How to Use the Web Application](#how-to-use-the-web-application)
 6. [Team Members](#team-members)
+
+## Overview
+The project was developed as part of the Malackathon 2024, an event organized by the School of Computer Science at the University of Málaga to address the challenges related to water sustainability (aligned with the United Nations' Sustainable Development Goal 6). The goal was to create a system that accesses a database hosted on Oracle Cloud Infrastructure (OCI) to retrieve information about water reservoirs and visualize it through an interactive map.
+
+Our team had approximately 8 hours to develop the solution, excluding breaks for meals and the final presentation. Despite the time constraints, we successfully implemented most of the challenge phases, except for phase 3, which was not completed due to a lack of additional data available online.
 
 ## Challenge Requirements
 The hackathon challenge consisted of five phases. Our implementation covered the following:
